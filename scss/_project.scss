@@ -1,0 +1,97 @@
+/*=====================================================================
+==========================   Project scss  =========================
+========================================================================*/
+
+.project {
+    &-grid {
+        margin-bottom: 8px;
+
+        .img-style {
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            @include border-radius(20px);
+
+            a {
+                height: 100%;
+                display: block;
+
+                img {
+                    height: auto;
+                    width: 100%;
+                    transition: .5s;
+                }
+            }
+
+            @media (min-width: 1799px) {
+                height: 22.719rem;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .content-style {
+            width: 85%;
+            padding: 1rem;
+
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+
+            a {
+                color: $active;
+                display: block;
+                margin-bottom: 0.75rem;
+
+                h5 {}
+            }
+
+            .meta {
+                display: flex;
+                align-items: center;
+                gap: 1.25rem;
+
+                a {
+                    color: $txt;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &:hover {
+            .img-style {
+                img {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+    .row {
+        .row_custom_col {
+            &:nth-child(even) {
+                .project-grid {
+                    &:nth-child(odd) {
+                        .img-style {
+
+                            @media (min-width: 1799px) {
+                                height: 28.188rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(5n) {
+                .project-grid {
+                    @media (min-width: 1799px) {
+                        margin-top: 5.375rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+/*=====================================================================
+==========================   Menu scss  =========================
+========================================================================*/
+
+.mainNav {
+    @include full-width;
+    text-align: center;
+    margin-top: 1.25rem;
+    margin-bottom: 5rem;
+
+    &.sticky {
+        position: fixed;
+        bottom: 0;
+        z-index: 9;
+        margin-bottom: 0;
+    }
+
+    ul {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: $bg;
+        border: 1px solid $bg;
+        box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 8px;
+
+        li {
+            display: inline-flex;
+            padding-left: 10px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            a {
+                padding: 9.5px 12px;
+                font-size: 13px;
+                @include nohemi(medium);
+                color: #958F8F;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+
+            &.social {
+                position: relative;
+                padding-left: 2rem;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 1rem;
+                    width: 2px;
+                    height: 8px;
+                    background: $bg;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: #48484E;
+                }
+
+                a {
+                    i {}
+                }
+            }
+
+            &.active {
+                a {
+                    color: $bg;
+                    background: $active;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.89);
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+}

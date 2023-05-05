@@ -1,0 +1,100 @@
+/*=====================================================================
+==========================   Home scss  =========================
+========================================================================*/
+
+header,
+section,
+footer {
+  @include full-width;
+}
+
+section,
+.divider {
+  margin-bottom: 6.25rem;
+}
+
+.heading {
+  margin-bottom: 4.063rem;
+
+  h4 {
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+
+  h3 {
+    
+
+    span {
+      color: $orange;
+    }
+  }
+
+  &-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.btn {
+  &-custom {
+    @include nohemi(medium);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    padding: 1.5rem 2.35rem;
+    display: inline-block;
+    line-height: 0;
+    border: 1px solid;
+    border-radius: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+.container-fluid,
+.container,
+.container-sm {
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1366px) {
+    max-width: 1320px;
+  }
+
+  @media (min-width: 1799px) {
+    max-width: 1720px;
+  }
+}
+
+.container-fluid,
+.container {
+  @media (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container {
+  @media (min-width: 1500px) {
+    max-width: 1480px;
+  }
+}
+
+.divider {
+  @include full-width;
+  border: 1px solid #2A2A2C;
+}

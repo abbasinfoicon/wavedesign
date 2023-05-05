@@ -1,0 +1,50 @@
+/*=====================================================================
+==========================   Slider scss  =========================
+========================================================================*/
+
+.slider {
+    margin-bottom: 0;
+
+    &-home {
+        .item {
+            height: 51.125rem;
+            width: 100%;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+
+            &:after {
+                content: '';
+                @include overlay;
+                background: linear-gradient(0deg, rgba(42, 42, 44, 0.8), rgba(42, 42, 44, 0.8));
+            }
+
+            video {}
+
+            &-content {
+                @include img-center(both);
+                text-align: center;
+                z-index: 9;
+                width: 55%;
+
+                p {
+                    @include nohemi(medium);
+                    letter-spacing: 3px;
+                }
+
+                h2 {
+                    @include nohemi(medium);
+                    letter-spacing: 3px;
+                    line-height: 1;
+                    margin-bottom: 1.875rem;
+                }
+
+                a {
+                    i {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

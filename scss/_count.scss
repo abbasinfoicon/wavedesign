@@ -1,0 +1,176 @@
+/*=====================================================================
+==========================   Count scss  =========================
+========================================================================*/
+
+.count {
+    &-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        @media (max-width: 991px) {
+            flex-wrap: wrap;
+        }
+
+        .box {
+            position: relative;
+            background: $bg;
+            box-shadow: $boxshadow;
+            border-radius: 40px;
+            max-width: 460px;
+            min-height: 562px;
+            width: 100%;
+            padding: 2.5rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: .5s;
+            overflow: hidden;
+
+            @media (max-width: 991px) {
+                width: 48%;
+            }
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+
+            @media (max-width: 425px) {
+                min-height: 265px;
+                padding: 1.5rem;
+            }
+
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                img {}
+
+                span {
+                    &.circle {
+                        border-radius: 100%;
+                        background-color: #48484E;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+
+
+                        &:first-child {
+                            width: 2.625rem;
+                            height: 2.625rem;
+                            z-index: 3;
+                            background: #48484E;
+                            box-shadow: 0px 0px 4px #E99B53;
+                        }
+
+                        &:nth-child(2) {
+                            width: 17.5rem;
+                            height: 17.5rem;
+                            z-index: 2;
+                            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+                        }
+
+                        &:nth-child(3) {
+                            width: 29.75rem;
+                            height: 29.75rem;
+                            z-index: 1;
+                            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
+                        }
+                    }
+                }
+            }
+
+            h2 {
+                @include nohemi(medium);
+            }
+
+            p {
+                @include nohemi(semibold);
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                h2 {
+                    color: $orange;
+                }
+
+                .bottom {
+                    p {
+                        color: $white;
+                    }
+                }
+            }
+
+            &1 {}
+
+            &2 {}
+
+            &3 {}
+
+            &4 {
+                width: 296px;
+                transition: .5s;
+
+                @media (max-width: 991px) {
+                    width: 48%;
+                }
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+
+                .top {
+                    flex-direction: column;
+
+                }
+
+                img {
+                    margin-right: 10px;
+                }
+
+                p {
+                    text-align: center;
+                    text-transform: none;
+                    color: $white;
+                    transition: .5s;
+                }
+
+                &:hover {
+                    p {
+                        transform: translateY(-16px);
+                    }
+
+
+                    span {
+                        &.circle {
+                            &:first-child {
+                                background: #FFFFFF;
+                            }
+
+                            &:nth-child(2) {
+                                background: radial-gradient(50% 50% at 50% 50%, #FFE0C4 74.77%, #FFE8D3 100%), radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+                                box-shadow: 0px 0px 40px #E99B53;
+                            }
+
+                            &:nth-child(3) {
+                                background: radial-gradient(50% 50% at 50% 50%, #FFD1A8 73.41%, #F9DFC3 100%), radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
+                                box-shadow: 0px 0px 60px #E99B53;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

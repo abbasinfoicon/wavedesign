@@ -1,0 +1,1029 @@
+/*=====================================================================
+==========================   All Variable scss  =========================
+========================================================================*/
+/*=====================================================================
+==========================   all-mixing-scss  =========================
+========================================================================*/
+/* output CSS
+.icon-save {
+  color: green;
+}
+.icon-cancel {
+  color: gray;
+}
+.icon-delete {
+  color: red;
+} */
+/*=====================================================================
+==========================   FONTS  =========================
+========================================================================*/
+@font-face {
+  font-family: "Nohemi-Bold";
+  src: url("../fonts/nohemi/Nohemi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-Black";
+  src: url("../fonts/nohemi/Nohemi-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-ExtraBold";
+  src: url("../fonts/nohemi/Nohemi-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-ExtraLight";
+  src: url("../fonts/nohemi/Nohemi-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-Light";
+  src: url("../fonts/nohemi/Nohemi-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-Medium";
+  src: url("../fonts/nohemi/Nohemi-Medium.woff") format("woff"), url("../fonts/nohemi/Nohemi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-Regular";
+  src: url("../fonts/nohemi/Nohemi-Regular.woff") format("woff"), url("../fonts/nohemi/Nohemi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-SemiBold";
+  src: url("../fonts/nohemi/Nohemi-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-Thin";
+  src: url("../fonts/nohemi/Nohemi-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi-VF";
+  src: url("../fonts/nohemi/Nohemi-VF.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+/*=====================================================================
+==========================   all typstyle scss  =========================
+========================================================================*/
+h1,
+.h1 {
+  font-size: 6rem;
+}
+
+h2,
+.h2 {
+  font-size: 4.5rem;
+}
+
+h3,
+.h3 {
+  font-size: 4rem;
+}
+
+h4,
+.h4 {
+  font-size: 2.25rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem;
+}
+
+h6,
+.h6 {
+  font-size: 0.875rem;
+}
+
+p,
+li,
+a {
+  font-size: 1rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/*=====================================================================
+==========================   Loading scss  =========================
+========================================================================*/
+.progress-wrap {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 2px rgba(29, 35, 58, 0.2);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 200ms linear;
+}
+.progress-wrap.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.progress-wrap::after {
+  position: absolute;
+  content: "\f176";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  text-align: center;
+  line-height: 46px;
+  font-size: 18px;
+  color: #FF9838;
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  transition: all 200ms linear;
+}
+.progress-wrap svg.progress-circle path {
+  stroke: #FF9838;
+  stroke-width: 4;
+  box-sizing: border-box;
+  transition: all 200ms linear;
+}
+.progress-wrap svg path {
+  fill: none;
+}
+
+#pre-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 999999;
+}
+#pre-loader .pre-loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  padding: 0px;
+  text-align: left;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+#pre-loader .pre-loader span {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #FF9838;
+  animation: pre-loader 1.3s linear infinite;
+  -webkit-animation: pre-loader 1.3s linear infinite;
+}
+#pre-loader .pre-loader span:last-child {
+  animation-delay: -0.8s;
+  -webkit-animation-delay: -0.8s;
+}
+
+@keyframes pre-loader {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+/*=====================================================================
+==========================   main-css-all-pages  =========================
+========================================================================*/
+html {
+  font-size: 16px;
+}
+@media (max-width: 1366px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: #717171;
+  font-size: 1rem;
+  font-family: "Nohemi-Regular";
+  background-color: #1C1C1D;
+  letter-spacing: 0.7px;
+}
+
+/*=====================================================================
+==========================   font-face  =========================
+========================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+a:link,
+a:visited {
+  text-decoration: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+p,
+li {
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+.btn,
+.form-control,
+input {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+}
+button:focus, button:active, button:visited,
+.btn:focus,
+.btn:active,
+.btn:visited,
+.form-control:focus,
+.form-control:active,
+.form-control:visited,
+input:focus,
+input:active,
+input:visited {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #1C1C1D;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FF9838;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1C1C1D;
+}
+
+/*========================================================================================================
+================================ Header Scss ===================================================================
+===========================================================================================================*/
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+@media (max-width: 767px) {
+  .header-top {
+    flex-direction: row-reverse;
+  }
+}
+.header-lgTheme {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  align-items: center;
+}
+.header-lgTheme:before {
+  content: "";
+  position: absolute;
+  left: 67px;
+  width: 2px;
+  height: 8px;
+  background: #242425;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-lgTheme .lauguage {
+  line-height: 1;
+}
+.header-lgTheme .lauguage select {
+  border: none;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.header-lgTheme .lauguage select:focus {
+  outline: none;
+}
+.header-theme a.themeChange img {
+  width: 24px;
+  height: 24px;
+}
+.header-theme a.themeChange img.light {
+  display: none;
+  padding: 3px;
+}
+.header-theme a.themeChange img.dark {
+  display: block;
+}
+.header-theme a.themeChange.light img.dark {
+  display: none;
+}
+.header-theme a.themeChange.light img.light {
+  display: block;
+}
+.header-logo {
+  height: 1.25rem;
+}
+.header-logo a img {
+  width: auto;
+  height: 100%;
+}
+.header-shy h6 {
+  margin-bottom: 0;
+  font-family: "Nohemi-Medium";
+}
+.header-shy h6 img {
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .header-shy {
+    display: none;
+  }
+}
+.header.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+/*========================================================================================================
+================================ Footer Scss ===================================================================
+===========================================================================================================*/
+.footer {
+  padding: 4.375rem 0;
+  background-color: #111112;
+}
+@media (max-width: 767px) {
+  .footer-logo {
+    margin-bottom: 1rem;
+  }
+}
+.footer-logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 5px;
+}
+.footer-logo img {
+  height: 1.688rem;
+}
+.footer-logo img.icon {
+  height: 3.75rem;
+}
+.footer-logo h6 {
+  color: #717171;
+}
+.footer-section h4 {
+  font-family: "Nohemi-Medium";
+  letter-spacing: 1.8px;
+  line-height: 1.35;
+  margin-bottom: 4.5rem;
+}
+@media (max-width: 767px) {
+  .footer-section h4 {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer-link {
+    margin-bottom: 2rem;
+  }
+}
+.footer-link p {
+  font-size: 0.875rem;
+  margin-bottom: 0.813re;
+}
+.footer-link ul li {
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .footer-link ul li {
+    margin-bottom: 5px;
+  }
+}
+.footer-link ul li a {
+  font-size: 1rem;
+  display: block;
+}
+.footer-link ul li a:hover {
+  color: #FF9838;
+}
+.footer-link ul.text-uppercase li a {
+  text-transform: uppercase;
+}
+
+/*=====================================================================
+==========================   Home scss  =========================
+========================================================================*/
+header,
+section,
+footer {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+section,
+.divider {
+  margin-bottom: 6.25rem;
+}
+
+.heading {
+  margin-bottom: 4.063rem;
+}
+.heading h4 img {
+  margin-right: 1rem;
+}
+.heading h3 span {
+  color: #FF9838;
+}
+.heading-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-custom {
+  font-family: "Nohemi-Medium";
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 1.5rem 2.35rem;
+  display: inline-block;
+  line-height: 0;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+@media (min-width: 576px) {
+  .container-fluid,
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-fluid,
+  .container,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-fluid,
+  .container,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid,
+  .container,
+  .container-sm {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1366px) {
+  .container-fluid,
+  .container,
+  .container-sm {
+    max-width: 1320px;
+  }
+}
+@media (min-width: 1799px) {
+  .container-fluid,
+  .container,
+  .container-sm {
+    max-width: 1720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-fluid,
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1480px;
+  }
+}
+
+.divider {
+  float: left;
+  width: 100%;
+  position: relative;
+  border: 1px solid #2A2A2C;
+}
+
+/*=====================================================================
+==========================   Theme color scss  =========================
+========================================================================*/
+.header-lgTheme .lauguage select,
+.header {
+  background-color: #1C1C1D;
+}
+
+.header-lgTheme .lauguage select,
+.header-shy h6,
+.footer-section h4,
+.footer-link ul li a,
+.footer-link ul li,
+.heading h4,
+.heading h3,
+.slider-home .item-content p,
+.slider-home .item-content h2,
+.mainNav ul li a {
+  color: #ffffff;
+}
+
+.btn-custom {
+  color: #ffffff;
+  background-color: transparent;
+}
+.btn-custom:hover {
+  color: #242728;
+  background-color: #ffffff;
+}
+.btn-bg {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #242728;
+}
+.btn-bg:hover {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.light {
+  background-color: #ffffff;
+}
+.light .header-lgTheme .lauguage select,
+.light .footer,
+.light .header,
+.light .mainNav ul {
+  background-color: #ffffff;
+}
+.light .mainNav ul {
+  box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.25);
+}
+.light .header-lgTheme .lauguage select,
+.light .header-shy h6,
+.light .footer-section h4,
+.light .footer-link ul li a,
+.light .footer-link ul li,
+.light .heading h4,
+.light .heading h3,
+.light .footer-logo h6,
+.light .slider-home .item-content p,
+.light .slider-home .item-content h2,
+.light .mainNav ul li a {
+  color: #717171;
+}
+.light .btn-custom {
+  color: #717171;
+  background-color: transparent;
+}
+.light .btn-custom:hover {
+  color: #ffffff;
+  background-color: #717171;
+}
+.light .slider-home .item:after {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+}
+
+/*=====================================================================
+==========================   Slider scss  =========================
+========================================================================*/
+.slider {
+  margin-bottom: 0;
+}
+.slider-home .item {
+  height: 51.125rem;
+  width: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.slider-home .item:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(42, 42, 44, 0.8), rgba(42, 42, 44, 0.8));
+}
+.slider-home .item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9;
+  width: 55%;
+}
+.slider-home .item-content p {
+  font-family: "Nohemi-Medium";
+  letter-spacing: 3px;
+}
+.slider-home .item-content h2 {
+  font-family: "Nohemi-Medium";
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-bottom: 1.875rem;
+}
+.slider-home .item-content a i {
+  margin-left: 1rem;
+}
+
+/*=====================================================================
+==========================   Menu scss  =========================
+========================================================================*/
+.mainNav {
+  float: left;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-top: 1.25rem;
+  margin-bottom: 5rem;
+}
+.mainNav.sticky {
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+  margin-bottom: 0;
+}
+.mainNav ul {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #242425;
+  border: 1px solid #242425;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 8px;
+}
+.mainNav ul li {
+  display: inline-flex;
+  padding-left: 10px;
+}
+.mainNav ul li:first-child {
+  padding-left: 0;
+}
+.mainNav ul li a {
+  padding: 9.5px 12px;
+  font-size: 13px;
+  font-family: "Nohemi-Medium";
+  color: #958F8F;
+}
+.mainNav ul li a:hover {
+  color: #ffffff;
+}
+.mainNav ul li.social {
+  position: relative;
+  padding-left: 2rem;
+}
+.mainNav ul li.social:before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  width: 2px;
+  height: 8px;
+  background: #242425;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #48484E;
+}
+.mainNav ul li.active a {
+  color: #242425;
+  background: #F5F5F5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.89);
+  border-radius: 6px;
+}
+
+/*=====================================================================
+==========================   About scss  =========================
+========================================================================*/
+.about-content {
+  text-align: center;
+}
+.about-content h3 {
+  color: #2A2A2C;
+  font-size: 3rem;
+  margin-bottom: 3.125rem;
+}
+/*=====================================================================
+==========================   Count scss  =========================
+========================================================================*/
+.count-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 991px) {
+  .count-box {
+    flex-wrap: wrap;
+  }
+}
+.count-box .box {
+  position: relative;
+  background: #242425;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  max-width: 460px;
+  min-height: 562px;
+  width: 100%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .count-box .box {
+    width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .count-box .box {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .count-box .box {
+    min-height: 265px;
+    padding: 1.5rem;
+  }
+}
+.count-box .box .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.count-box .box .top p {
+  margin-bottom: 0;
+}
+.count-box .box .top span.circle {
+  border-radius: 100%;
+  background-color: #48484E;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.count-box .box .top span.circle:first-child {
+  width: 2.625rem;
+  height: 2.625rem;
+  z-index: 3;
+  background: #48484E;
+  box-shadow: 0px 0px 4px #E99B53;
+}
+.count-box .box .top span.circle:nth-child(2) {
+  width: 17.5rem;
+  height: 17.5rem;
+  z-index: 2;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+}
+.count-box .box .top span.circle:nth-child(3) {
+  width: 29.75rem;
+  height: 29.75rem;
+  z-index: 1;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
+}
+.count-box .box h2 {
+  font-family: "Nohemi-Medium";
+}
+.count-box .box p {
+  font-family: "Nohemi-SemiBold";
+  text-transform: uppercase;
+}
+.count-box .box:hover h2 {
+  color: #FF9838;
+}
+.count-box .box:hover .bottom p {
+  color: #ffffff;
+}
+.count-box .box4 {
+  width: 296px;
+  transition: 0.5s;
+}
+@media (max-width: 991px) {
+  .count-box .box4 {
+    width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .count-box .box4 {
+    width: 100%;
+  }
+}
+.count-box .box4 .top {
+  flex-direction: column;
+}
+.count-box .box4 img {
+  margin-right: 10px;
+}
+.count-box .box4 p {
+  text-align: center;
+  text-transform: none;
+  color: #ffffff;
+  transition: 0.5s;
+}
+.count-box .box4:hover p {
+  transform: translateY(-16px);
+}
+.count-box .box4:hover span.circle:first-child {
+  background: #FFFFFF;
+}
+.count-box .box4:hover span.circle:nth-child(2) {
+  background: radial-gradient(50% 50% at 50% 50%, #FFE0C4 74.77%, #FFE8D3 100%), radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0px 0px 40px #E99B53;
+}
+.count-box .box4:hover span.circle:nth-child(3) {
+  background: radial-gradient(50% 50% at 50% 50%, #FFD1A8 73.41%, #F9DFC3 100%), radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
+  box-shadow: 0px 0px 60px #E99B53;
+}
+
+/*=====================================================================
+==========================   Project scss  =========================
+========================================================================*/
+.project-grid {
+  margin-bottom: 8px;
+}
+.project-grid .img-style {
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.project-grid .img-style a {
+  height: 100%;
+  display: block;
+}
+.project-grid .img-style a img {
+  height: auto;
+  width: 100%;
+  transition: 0.5s;
+}
+@media (min-width: 1799px) {
+  .project-grid .img-style {
+    height: 22.719rem;
+  }
+  .project-grid .img-style img {
+    height: 100%;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.project-grid .content-style {
+  width: 85%;
+  padding: 1rem;
+}
+@media (max-width: 991px) {
+  .project-grid .content-style {
+    width: 100%;
+  }
+}
+.project-grid .content-style a {
+  color: #F5F5F5;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.project-grid .content-style .meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.project-grid .content-style .meta a {
+  color: #717171;
+  margin-bottom: 0;
+}
+.project-grid:hover .img-style img {
+  scale: 1.1;
+}
+@media (min-width: 1799px) {
+  .project .row .row_custom_col:nth-child(even) .project-grid:nth-child(odd) .img-style {
+    height: 28.188rem;
+  }
+}
+@media (min-width: 1799px) {
+  .project .row .row_custom_col:nth-child(5n) .project-grid {
+    margin-top: 5.375rem;
+  }
+}
+
+/*=====================================================================
+==========================   Progass scss  =========================
+========================================================================*/
+/*=====================================================================
+==========================   Unlock scss  =========================
+========================================================================*/
+/*=====================================================================
+==========================   Client scss  =========================
+========================================================================*/
+.client-carousel .item a img {
+  width: auto;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.min.css.map */

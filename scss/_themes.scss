@@ -1,0 +1,87 @@
+/*=====================================================================
+==========================   Theme color scss  =========================
+========================================================================*/
+.header-lgTheme .lauguage select,
+.header {
+    background-color: $blk;
+}
+
+.header-lgTheme .lauguage select,
+.header-shy h6,
+.footer-section h4,
+.footer-link ul li a,
+.footer-link ul li,
+.heading h4,
+.heading h3,
+.slider-home .item-content p,
+.slider-home .item-content h2,
+.mainNav ul li a {
+    color: $white;
+}
+
+.btn {
+    &-custom {
+        color: $white;
+        background-color: transparent;
+
+        &:hover {
+            color: #242728;
+            background-color: $white;
+        }
+    }
+
+    &-bg {
+        background-color: $white;
+        border-color: $white;
+        color: #242728;
+
+        &:hover {
+            color: $white;
+            background-color: transparent;
+        }
+    }
+}
+
+
+.light {
+    background-color: $white;
+
+    .header-lgTheme .lauguage select,
+    .footer,
+    .header,
+    .mainNav ul {
+        background-color: $white;
+    }
+
+    .mainNav ul {
+        box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.25);
+    }
+
+    .header-lgTheme .lauguage select,
+    .header-shy h6,
+    .footer-section h4,
+    .footer-link ul li a,
+    .footer-link ul li,
+    .heading h4,
+    .heading h3,
+    .footer-logo h6,
+    .slider-home .item-content p,
+    .slider-home .item-content h2,
+    .mainNav ul li a {
+        color: $txt;
+    }
+
+    .btn-custom {
+        color: $txt;
+        background-color: transparent;
+
+        &:hover {
+            color: $white;
+            background-color: $txt;
+        }
+    }
+
+    .slider-home .item:after {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    }
+}

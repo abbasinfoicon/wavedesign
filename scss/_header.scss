@@ -1,0 +1,113 @@
+/*========================================================================================================
+================================ Header Scss ===================================================================
+===========================================================================================================*/
+
+.header {
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+
+    @media (max-width: 767px) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &-lgTheme {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    align-items: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 67px;
+      width: 2px;
+      height: 8px;
+      background: $bg;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .lauguage {
+      line-height: 1;
+
+      select {
+        border: none;
+        font-size: 1rem;
+        font-family: sans-serif;
+        font-weight: bold;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &-theme {
+    a {
+      &.themeChange {
+        img {
+          width: 24px;
+          height: 24px;
+
+          &.light {
+            display: none;
+            padding: 3px;
+          }
+
+          &.dark {
+            display: block;
+          }
+        }
+
+        &.light {
+          img {
+            &.dark {
+              display: none;
+            }
+
+            &.light {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-logo {
+    height: 1.25rem;
+
+    a {
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  &-shy {
+    h6 {
+      margin-bottom: 0;
+      @include nohemi(medium);
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+  }
+}
