@@ -4,15 +4,52 @@
 
 .prgass {
     &-section {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: $gry;
+            height: 1px;
+            width: 100%;
+            top: 21px;
+        }
+
         .pro-sec {
             .dot {
-                span {}
+                width: 44px;
+                height: 44px;
+                border: 1px solid $gry;
+                @include border-radius(100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $blk;
+                position: relative;
+                z-index: 9;
+                margin-bottom: 2.125rem;
+
+                span {
+                    width: 12px;
+                    height: 12px;
+                    background: $gry;
+                    display: block;
+                    @include border-radius(100%);
+                }
             }
 
-            h3 {}
+            h3 {
+                font-size: 1.5rem;
+                color: $txt;
+                margin-bottom: 1rem;
+            }
 
             ul {
-                li {}
+                li {
+                    font-size: 0.875rem;
+                    margin-bottom: 2px;
+                    color: $txt;
+                }
             }
         }
     }

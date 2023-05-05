@@ -1017,6 +1017,56 @@ section,
 /*=====================================================================
 ==========================   Progass scss  =========================
 ========================================================================*/
+.prgass-section {
+  position: relative;
+}
+.prgass-section:after {
+  content: "";
+  position: absolute;
+  background-color: #404040;
+  height: 1px;
+  width: 100%;
+  top: 21px;
+}
+.prgass-section .pro-sec .dot {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #404040;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C1C1D;
+  position: relative;
+  z-index: 9;
+  margin-bottom: 2.125rem;
+}
+.prgass-section .pro-sec .dot span {
+  width: 12px;
+  height: 12px;
+  background: #404040;
+  display: block;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.prgass-section .pro-sec h3 {
+  font-size: 1.5rem;
+  color: #717171;
+  margin-bottom: 1rem;
+}
+.prgass-section .pro-sec ul li {
+  font-size: 0.875rem;
+  margin-bottom: 2px;
+  color: #717171;
+}
+
 /*=====================================================================
 ==========================   Unlock scss  =========================
 ========================================================================*/
