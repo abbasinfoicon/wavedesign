@@ -163,7 +163,7 @@ $(window).scroll(function () {
     let aboutElement = $('.about');
     let aboutOffset = aboutElement.offset().top;
     let aboutHeight = aboutElement.outerHeight();
-    let h3Color = aboutOffset - (aboutHeight * 0.7);
+    let h3Color = aboutOffset - (aboutHeight * 0.8);
 
     if (scroll > h3Color) {
         $('.about-content h3').each(function (i) {
@@ -177,7 +177,7 @@ $(window).scroll(function () {
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    let cusHgt = $('.prgass').offset().top - 100;
+    let cusHgt = $('.prgass').offset().top - 300;
 
     if (scroll > cusHgt) {
         $('.prgass-section').addClass('active');
