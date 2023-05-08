@@ -4,6 +4,7 @@
 
 .slider {
     margin-bottom: 0;
+    position: relative;
 
     &-home {
         .item {
@@ -46,5 +47,73 @@
                 }
             }
         }
+    }
+}
+
+.text-carousel {
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 275px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .item {
+        position: relative;
+        text-align: center;
+        background-color: $blk;
+        height: 66px;
+        padding: 20px 24px;
+        border-radius: 48px 48px 0 0;
+
+        &:after,
+        &:before {
+            content: '';
+        }
+
+        p {
+            color: $white;
+            margin: 0;
+            padding: 0;
+            animation: txt 2s alternate infinite;
+        }
+
+        .line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 3px;
+            background-color: $orange;
+            border-radius: 8px;
+            bottom: 1rem;
+            animation: line 1s alternate infinite;
+        }
+    }
+}
+
+@keyframes line {
+    0% {
+        bottom: 3rem;
+    }
+
+    100% {
+        bottom: 1rem;
+    }
+}
+
+@keyframes txt {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

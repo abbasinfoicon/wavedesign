@@ -678,6 +678,7 @@ section,
 ========================================================================*/
 .slider {
   margin-bottom: 0;
+  position: relative;
 }
 .slider-home .item {
   height: 51.125rem;
@@ -718,6 +719,64 @@ section,
   margin-left: 1rem;
 }
 
+.text-carousel {
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 275px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.text-carousel .item {
+  position: relative;
+  text-align: center;
+  background-color: #1C1C1D;
+  height: 66px;
+  padding: 20px 24px;
+  border-radius: 48px 48px 0 0;
+}
+.text-carousel .item:after, .text-carousel .item:before {
+  content: "";
+}
+.text-carousel .item p {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  animation: txt 2s alternate infinite;
+}
+.text-carousel .item .line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 3px;
+  background-color: #FF9838;
+  border-radius: 8px;
+  bottom: 1rem;
+  animation: line 1s alternate infinite;
+}
+
+@keyframes line {
+  0% {
+    bottom: 3rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
+@keyframes txt {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*=====================================================================
 ==========================   Menu scss  =========================
 ========================================================================*/

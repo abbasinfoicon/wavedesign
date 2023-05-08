@@ -84,7 +84,21 @@ $('#scroll').click(function () {
 
 $('.slider-home').owlCarousel({
     loop: true,
-    autoplay: false,
+    autoplay: true,
+    nav: false,
+    dots: false,
+    items: 1,
+    margin: 0,
+    touchDrag: false,
+    mouseDrag: false,
+    animateIn: 'fadeIn', // add this
+    animateOut: 'fadeOut' // and this
+});
+
+$('.text-carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 1900,
     nav: false,
     dots: false,
     items: 1,
