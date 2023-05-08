@@ -170,7 +170,7 @@ $(window).scroll(function () {
             var heading = $(this);
             setTimeout(function () {
                 heading.addClass('color');
-            }, 300 * i);
+            }, 500 * i);
         });
     }
 });

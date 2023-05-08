@@ -10,10 +10,11 @@
         h3 {
             color: #2A2A2C;
             font-size: 3rem;
-            transition: .5s;
+            transition: color .5s;
 
             &.color {
                 color: $white;
+                transition: color 1s ease-in-out;
             }
         }
 

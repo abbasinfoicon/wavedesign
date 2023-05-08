@@ -870,10 +870,11 @@ section,
 .about-content h3 {
   color: #2A2A2C;
   font-size: 3rem;
-  transition: 0.5s;
+  transition: color 0.5s;
 }
 .about-content h3.color {
   color: #ffffff;
+  transition: color 1s ease-in-out;
 }
 .about-content a {
   display: inline-block;
