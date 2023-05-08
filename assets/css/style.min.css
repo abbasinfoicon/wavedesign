@@ -1162,8 +1162,14 @@ section,
   color: #717171;
   margin-bottom: 0;
 }
+.project-grid .content-style .meta a:hover {
+  color: #FF9838;
+}
 .project-grid:hover .img-style img {
   scale: 1.1;
+}
+.project-grid:hover .meta a {
+  color: #FF9838;
 }
 .project .row .row_custom_col {
   overflow: hidden;
