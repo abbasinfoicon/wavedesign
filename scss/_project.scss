@@ -72,6 +72,8 @@
 
     .row {
         .row_custom_col {
+            overflow: hidden;
+
             &:nth-child(even) {
                 .project-grid {
                     &:nth-child(odd) {

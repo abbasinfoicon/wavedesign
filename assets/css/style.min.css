@@ -24,30 +24,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Nohemi-Black";
-  src: url("../fonts/nohemi/Nohemi-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nohemi-ExtraBold";
-  src: url("../fonts/nohemi/Nohemi-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nohemi-ExtraLight";
-  src: url("../fonts/nohemi/Nohemi-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nohemi-Light";
-  src: url("../fonts/nohemi/Nohemi-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
   font-family: "Nohemi-Medium";
   src: url("../fonts/nohemi/Nohemi-Medium.woff") format("woff"), url("../fonts/nohemi/Nohemi-Medium.ttf") format("truetype");
   font-weight: 500;
@@ -63,18 +39,6 @@
   font-family: "Nohemi-SemiBold";
   src: url("../fonts/nohemi/Nohemi-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nohemi-Thin";
-  src: url("../fonts/nohemi/Nohemi-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nohemi-VF";
-  src: url("../fonts/nohemi/Nohemi-VF.ttf");
-  font-weight: 400;
   font-style: normal;
 }
 /*=====================================================================
@@ -349,7 +313,7 @@ input:visited {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #1C1C1D;
+  background: #48484E;
 }
 
 /*========================================================================================================
@@ -655,11 +619,13 @@ section,
 .light .header-lgTheme .lauguage select,
 .light .footer,
 .light .header,
-.light .mainNav ul {
+.light .mainNav ul,
+.light .count-box .box {
   background-color: #ffffff;
 }
 .light .mainNav ul {
-  box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
+  border-color: #ffffff;
 }
 .light .header-lgTheme .lauguage select,
 .light .header-shy h6,
@@ -671,16 +637,37 @@ section,
 .light .footer-logo h6,
 .light .slider-home .item-content p,
 .light .slider-home .item-content h2,
-.light .mainNav ul li a {
+.light .mainNav ul li a,
+.light .about-content h3.color,
+.light .count-box .box4 p,
+.light .project-grid .content-style a {
   color: #717171;
+}
+.light .about-content h3 {
+  color: #dbdbdb;
+}
+.light .count-box .box:hover .bottom p,
+.light .unlock-skill.active h1,
+.light .unlock-skill.active h3 {
+  color: #1C1C1D;
+}
+.light .mainNav ul li.active a,
+.light .prgass-section.active::before {
+  color: #ffffff;
+  background-color: #242425;
 }
 .light .btn-custom {
   color: #717171;
   background-color: transparent;
+  border-color: #717171;
 }
 .light .btn-custom:hover {
   color: #ffffff;
   background-color: #717171;
+}
+.light .divider,
+.light .prgass-section .act_dot .dot {
+  border-color: #717171;
 }
 .light .slider-home .item:after {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
@@ -740,13 +727,11 @@ section,
   position: relative;
   text-align: center;
   margin-top: 1.25rem;
-  margin-bottom: 5rem;
 }
 .mainNav.sticky {
   position: fixed;
   bottom: 0;
-  z-index: 9;
-  margin-bottom: 0;
+  z-index: 99;
 }
 .mainNav ul {
   display: inline-flex;
@@ -770,13 +755,20 @@ section,
   font-size: 13px;
   font-family: "Nohemi-Medium";
   color: #958F8F;
+  border-radius: 6px;
 }
 .mainNav ul li a:hover {
   color: #ffffff;
+  background-color: #48484E;
 }
 .mainNav ul li.social {
   position: relative;
   padding-left: 2rem;
+}
+@media (max-width: 767px) {
+  .mainNav ul li.social {
+    display: none;
+  }
 }
 .mainNav ul li.social:before {
   content: "";
@@ -793,7 +785,6 @@ section,
   color: #242425;
   background: #F5F5F5;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.89);
-  border-radius: 6px;
 }
 
 /*=====================================================================
@@ -801,12 +792,21 @@ section,
 ========================================================================*/
 .about-content {
   text-align: center;
+  margin-top: 5rem;
 }
 .about-content h3 {
   color: #2A2A2C;
   font-size: 3rem;
-  margin-bottom: 3.125rem;
+  transition: 0.5s;
 }
+.about-content h3.color {
+  color: #ffffff;
+}
+.about-content a {
+  display: inline-block;
+  margin-top: 3.125rem;
+}
+
 /*=====================================================================
 ==========================   Count scss  =========================
 ========================================================================*/
@@ -861,6 +861,14 @@ section,
 .count-box .box .top p {
   margin-bottom: 0;
 }
+.count-box .box .top .sendwatch {
+  position: relative;
+}
+.count-box .box .top .sendwatch img.icon {
+  position: absolute;
+  left: 5px;
+  transform: translateY(15px) rotate(0deg);
+}
 .count-box .box .top span.circle {
   border-radius: 100%;
   background-color: #48484E;
@@ -898,11 +906,35 @@ section,
 .count-box .box:hover h2 {
   color: #FF9838;
 }
+.count-box .box:hover .top img {
+  scale: 1.2;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
 .count-box .box:hover .bottom p {
   color: #ffffff;
 }
+.count-box .box1:hover .top img {
+  animation-name: wobble;
+}
+.count-box .box2:hover .top img {
+  scale: 1.1;
+  -webkit-animation-timing-function: revert;
+}
+.count-box .box2:hover .top img.img {
+  animation-name: wobble2;
+}
+.count-box .box2:hover .top img.icon {
+  animation-name: wobbleIcon;
+  -webkit-animation-timing-function: ease-out;
+}
+.count-box .box3:hover .top img {
+  animation-name: wobble3;
+}
 .count-box .box4 {
   width: 296px;
+  min-width: 250px;
   transition: 0.5s;
 }
 @media (max-width: 991px) {
@@ -942,6 +974,74 @@ section,
   box-shadow: 0px 0px 60px #E99B53;
 }
 
+@keyframes wobble {
+  0% {
+    transform: rotate(-13.05deg);
+  }
+  10% {
+    transform: rotate(15.71deg);
+  }
+  20% {
+    transform: rotate(-13.05deg);
+  }
+  30% {
+    transform: rotate(15.71deg);
+  }
+  40% {
+    transform: rotate(-13.05deg);
+  }
+  50% {
+    transform: rotate(15.71deg);
+  }
+  60% {
+    transform: rotate(-13.05deg);
+  }
+  70% {
+    transform: rotate(15.71deg);
+  }
+  80% {
+    transform: rotate(-13.05deg);
+  }
+  90% {
+    transform: rotate(15.71deg);
+  }
+  100% {
+    transform: rotate(-13.05deg);
+  }
+}
+@keyframes wobble2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes wobbleIcon {
+  0% {
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+  100% {
+    transform: translateY(15px) rotate(0deg);
+  }
+}
+@keyframes wobble3 {
+  0% {
+    transform: rotate(-13.05deg);
+  }
+  25% {
+    transform: rotate(15.71deg);
+  }
+  50% {
+    transform: rotate(-13.05deg);
+  }
+  75% {
+    transform: rotate(15.71deg);
+  }
+  100% {
+    transform: rotate(-13.05deg);
+  }
+}
 /*=====================================================================
 ==========================   Project scss  =========================
 ========================================================================*/
@@ -1003,6 +1103,9 @@ section,
 .project-grid:hover .img-style img {
   scale: 1.1;
 }
+.project .row .row_custom_col {
+  overflow: hidden;
+}
 @media (min-width: 1799px) {
   .project .row .row_custom_col:nth-child(even) .project-grid:nth-child(odd) .img-style {
     height: 28.188rem;
@@ -1020,18 +1123,52 @@ section,
 .prgass-section {
   position: relative;
 }
-.prgass-section:after {
+.prgass-section:after, .prgass-section::before {
   content: "";
   position: absolute;
   background-color: #404040;
-  height: 1px;
+  height: 2px;
   width: 100%;
   top: 21px;
+  transition: 1s;
+}
+@media (max-width: 767px) {
+  .prgass-section:after, .prgass-section::before {
+    content: none;
+  }
+}
+.prgass-section::before {
+  width: 0;
+  z-index: 9;
+}
+.prgass-section.active::before {
+  background-color: #ffffff;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .prgass-section .line {
+    position: absolute;
+    background-color: #404040;
+    height: 89%;
+    width: 2px;
+    left: 36px;
+  }
+}
+.prgass-section .pro-sec {
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .prgass-section .pro-sec {
+    display: flex;
+    gap: 2rem;
+    align-items: baseline;
+    margin-bottom: 2rem;
+  }
 }
 .prgass-section .pro-sec .dot {
   width: 44px;
   height: 44px;
-  border: 1px solid #404040;
+  border: 2px solid #404040;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -ms-border-radius: 100%;
@@ -1046,7 +1183,7 @@ section,
   margin-bottom: 2.125rem;
 }
 .prgass-section .pro-sec .dot span {
-  width: 12px;
+  min-width: 12px;
   height: 12px;
   background: #404040;
   display: block;
@@ -1055,6 +1192,7 @@ section,
   -ms-border-radius: 100%;
   -moz-border-radius: 100%;
   -o-border-radius: 100%;
+  transition: 0.5s;
 }
 .prgass-section .pro-sec h3 {
   font-size: 1.5rem;
@@ -1066,14 +1204,149 @@ section,
   margin-bottom: 2px;
   color: #717171;
 }
+.prgass-section .act_dot .dot {
+  border-color: #ffffff;
+  border-width: 3px;
+}
+.prgass-section .act_dot .dot span {
+  min-width: 24px;
+  height: 24px;
+  background-color: #FF9838;
+}
+
+.posr {
+  position: relative;
+}
 
 /*=====================================================================
 ==========================   Unlock scss  =========================
 ========================================================================*/
+.unlock-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 767px) {
+  .unlock-card {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+}
+.unlock-card-box {
+  border-radius: 20px;
+  width: 220px;
+  height: 159px;
+  position: relative;
+}
+.unlock-card-box .crd {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #1E1E1F;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  transform-origin: bottom left;
+}
+.unlock-card-box:hover {
+  background: #FF9838;
+  box-shadow: 0px 4px 12px #FF9838;
+}
+.unlock-card-box:hover .crd {
+  transform: rotate(-39.27deg);
+}
+.unlock-skill h1 {
+  font-family: "Nohemi-Medium";
+}
+.unlock-skill.active h1,
+.unlock-skill.active h3 {
+  color: #ffffff;
+}
+.unlock-skill.active ul li {
+  background-color: #ffffff;
+  opacity: 1;
+}
+.unlock-lock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -2rem;
+}
+.unlock-lock label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 46px;
+  background: #ffffff;
+  display: block;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -o-border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.unlock-lock label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+  background: #958F8F;
+  border-radius: 90px;
+  -webkit-border-radius: 90px;
+  -ms-border-radius: 90px;
+  -moz-border-radius: 90px;
+  -o-border-radius: 90px;
+  transition: 0.3s;
+}
+.unlock-lock label:active:after {
+  width: 35px;
+}
+.unlock-lock input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.unlock-lock input[type=checkbox]:checked + label {
+  background: #FF9838;
+}
+.unlock-lock input[type=checkbox]:checked + label:after {
+  left: calc(100% - 7px);
+  transform: translateX(-100%);
+  background-color: #ffffff;
+}
+.unlock ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+.unlock ul li {
+  padding: 16px 24px 12px;
+  background: #48484E;
+  border: 1px solid #48484E;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -o-border-radius: 35px;
+  font-family: "Nohemi-Medium";
+  color: #242425;
+}
 /*=====================================================================
 ==========================   Client scss  =========================
 ========================================================================*/
 .client-carousel .item a img {
   width: auto;
   margin: 0 auto;
+  filter: grayscale(1);
+}
+.client-carousel .item a img:hover {
+  filter: grayscale(0);
 }/*# sourceMappingURL=style.min.css.map */

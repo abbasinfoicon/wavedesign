@@ -49,12 +49,14 @@
     .header-lgTheme .lauguage select,
     .footer,
     .header,
-    .mainNav ul {
+    .mainNav ul,
+    .count-box .box {
         background-color: $white;
     }
 
     .mainNav ul {
-        box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.25);
+        box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
+        border-color: $white;
     }
 
     .header-lgTheme .lauguage select,
@@ -67,18 +69,43 @@
     .footer-logo h6,
     .slider-home .item-content p,
     .slider-home .item-content h2,
-    .mainNav ul li a {
+    .mainNav ul li a,
+    .about-content h3.color,
+    .count-box .box4 p,
+    .project-grid .content-style a {
         color: $txt;
+    }
+
+    .about-content h3 {
+        color: #dbdbdb;
+    }
+
+    .count-box .box:hover .bottom p,
+    .unlock-skill.active h1,
+    .unlock-skill.active h3 {
+        color: $blk;
+    }
+
+    .mainNav ul li.active a,
+    .prgass-section.active::before {
+        color: $white;
+        background-color: $bg;
     }
 
     .btn-custom {
         color: $txt;
         background-color: transparent;
+        border-color: $txt;
 
         &:hover {
             color: $white;
             background-color: $txt;
         }
+    }
+
+    .divider,
+    .prgass-section .act_dot .dot {
+        border-color: $txt;
     }
 
     .slider-home .item:after {

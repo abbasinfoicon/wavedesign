@@ -5,13 +5,21 @@
 .about {
     &-content {
         text-align: center;
+        margin-top: 5rem;
 
         h3 {
             color: #2A2A2C;
             font-size: 3rem;
-            margin-bottom: 3.125rem;
+            transition: .5s;
+
+            &.color {
+                color: $white;
+            }
         }
 
-        a {}
+        a {
+            display: inline-block;
+            margin-top: 3.125rem;
+        }
     }
 }

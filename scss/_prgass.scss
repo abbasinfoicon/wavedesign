@@ -6,20 +6,58 @@
     &-section {
         position: relative;
 
-        &:after {
+        &:after,
+        &::before {
             content: '';
             position: absolute;
             background-color: $gry;
-            height: 1px;
+            height: 2px;
             width: 100%;
             top: 21px;
+            transition: 1s;
+
+            @media (max-width: 767px) {
+                content: none;
+            }
+        }
+
+        &::before {
+            width: 0;
+            z-index: 9;
+        }
+
+        &.active {
+            &::before {
+                background-color: $white;
+                width: 100%;
+            }
+        }
+
+        .line {
+
+            @media (max-width: 767px) {
+                position: absolute;
+                background-color: $gry;
+                height: 89%;
+                width: 2px;
+                left: 36px;
+            }
         }
 
         .pro-sec {
+            overflow: hidden;
+
+            @media (max-width: 767px) {
+                display: flex;
+                gap: 2rem;
+                align-items: baseline;
+                margin-bottom: 2rem
+            }
+
             .dot {
                 width: 44px;
                 height: 44px;
-                border: 1px solid $gry;
+                border: 2px solid $gry;
                 @include border-radius(100%);
                 display: flex;
                 align-items: center;
@@ -30,11 +68,12 @@
                 margin-bottom: 2.125rem;
 
                 span {
-                    width: 12px;
+                    min-width: 12px;
                     height: 12px;
                     background: $gry;
                     display: block;
                     @include border-radius(100%);
+                    transition: .5s;
                 }
             }
 
@@ -52,5 +91,22 @@
                 }
             }
         }
+
+        .act_dot {
+            .dot {
+                border-color: $white;
+                border-width: 3px;
+
+                span {
+                    min-width: 24px;
+                    height: 24px;
+                    background-color: $orange;
+                }
+            }
+        }
     }
+}
+
+.posr {
+    position: relative;
 }

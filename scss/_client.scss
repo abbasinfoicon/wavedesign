@@ -9,6 +9,11 @@
                 img {
                     width: auto;
                     margin: 0 auto;
+                    filter: grayscale(1);
+
+                    &:hover {
+                        filter: grayscale(0);
+                    }
                 }
             }
         }

@@ -54,6 +54,18 @@
 
                 img {}
 
+                .sendwatch {
+                    position: relative;
+
+                    img {
+                        &.icon {
+                            position: absolute;
+                            left: 5px;
+                            transform: translateY(15px) rotate(0deg);
+                        }
+                    }
+                }
+
                 span {
                     &.circle {
                         border-radius: 100%;
@@ -104,6 +116,15 @@
                     color: $orange;
                 }
 
+                .top {
+                    img {
+                        scale: 1.2;
+                        -webkit-animation-duration: 0.8s;
+                        -webkit-animation-iteration-count: infinite;
+                        -webkit-animation-timing-function: linear;
+                    }
+                }
+
                 .bottom {
                     p {
                         color: $white;
@@ -111,14 +132,49 @@
                 }
             }
 
-            &1 {}
+            &1 {
+                &:hover {
+                    .top {
+                        img {
+                            animation-name: wobble;
+                        }
+                    }
+                }
+            }
 
-            &2 {}
+            &2 {
+                &:hover {
+                    .top {
+                        img {
+                            scale: 1.1;
+                            -webkit-animation-timing-function: revert;
 
-            &3 {}
+                            &.img {
+                                animation-name: wobble2;
+                            }
+
+                            &.icon {
+                                animation-name: wobbleIcon;
+                                -webkit-animation-timing-function: ease-out;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &3 {
+                &:hover {
+                    .top {
+                        img {
+                            animation-name: wobble3;
+                        }
+                    }
+                }
+            }
 
             &4 {
                 width: 296px;
+                min-width: 250px;
                 transition: .5s;
 
                 @media (max-width: 991px) {
@@ -172,5 +228,93 @@
 
             }
         }
+    }
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(-13.05deg);
+    }
+
+    10% {
+        transform: rotate(15.71deg);
+    }
+
+    20% {
+        transform: rotate(-13.05deg);
+    }
+
+    30% {
+        transform: rotate(15.71deg);
+    }
+
+    40% {
+        transform: rotate(-13.05deg);
+    }
+
+    50% {
+        transform: rotate(15.71deg);
+    }
+
+    60% {
+        transform: rotate(-13.05deg);
+    }
+
+    70% {
+        transform: rotate(15.71deg);
+    }
+
+    80% {
+        transform: rotate(-13.05deg);
+    }
+
+    90% {
+        transform: rotate(15.71deg);
+    }
+
+    100% {
+        transform: rotate(-13.05deg);
+    }
+}
+
+@keyframes wobble2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes wobbleIcon {
+    0% {
+        transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+
+    100% {
+        transform: translateY(15px) rotate(0deg);
+    }
+}
+
+@keyframes wobble3 {
+    0% {
+        transform: rotate(-13.05deg);
+    }
+
+    25% {
+        transform: rotate(15.71deg);
+    }
+
+    50% {
+        transform: rotate(-13.05deg);
+    }
+
+    75% {
+        transform: rotate(15.71deg);
+    }
+
+    100% {
+        transform: rotate(-13.05deg);
     }
 }

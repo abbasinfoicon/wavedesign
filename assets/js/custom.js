@@ -52,16 +52,6 @@ if ($(window).width() > 991) {
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
-    if (scroll > 80) {
-        $('.header').addClass('sticky');
-    } else {
-        $('.header').removeClass('sticky');
-    }
-});
-
-$(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-
     if (scroll > 700) {
         $('.mainNav').addClass('sticky');
     } else {
@@ -108,7 +98,7 @@ $('.slider-home').owlCarousel({
 
 $('.client-carousel').owlCarousel({
     loop: true,
-    autoplay: false,
+    autoplay: true,
     nav: false,
     dots: false,
     margin: 30,
@@ -121,51 +111,44 @@ $('.client-carousel').owlCarousel({
         },
         1200: {
             items: 6
+        },
+        1366: {
+            items: 7
         }
     }
 });
 
-$('.testimonial-carousel').owlCarousel({
-    loop: false,
-    nav: true,
-    dots: true,
-    items: 1,
-    margin: 0,
-    autoplayTimeout: 4000,
-    smartSpeed: 400,
-});
-
-$('.ratings-carousel').owlCarousel({
-    loop: true,
-    responsiveClass: true,
-    nav: true,
-    dots: false,
-    margin: 0,
-    autoplayTimeout: 4000,
-    smartSpeed: 400,
-    center: true,
-    touchDrag: false,
-    mouseDrag: false,
-    center: true,
-    stagePadding: 300,
-    items: 1,
-});
-
-
-
-
-
-$("#color_change p").click(function () {
-    $("#color_change").toggleClass("show");
-    $(this).find('i').toggleClass('fa-fill-drip fa-xmark')
-})
-
-$(".navbar-toggler").click(function () {
-    $(this).find('i').toggleClass('fa-bars fa-xmark')
-})
 
 // themes color change
 $(".themeChange").click(function () {
     $(this).toggleClass('light');
     $("body").toggleClass('light');
 })
+
+$('input#switch').change(function () {
+    $(this).parents('.unlock-skill').toggleClass('active');
+});
+
+$('.about-content h3').hover(function () {
+    $(this).addClass('color');
+});
+
+
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    let cusHgt = $('.prgass').offset().top - 100;
+
+    if (scroll > cusHgt) {
+        $('.prgass-section').addClass('active');
+        $('.prgass-row .col-md-3').each(function (i) {
+            var row = $(this);
+            setTimeout(function () {
+                row.addClass('act_dot');
+            }, 300 * i);
+
+        });
+    } else {
+        $('.prgass-section').removeClass('active');
+        $('.prgass-row .col-md-3').removeClass('act_dot');
+    }
+});
