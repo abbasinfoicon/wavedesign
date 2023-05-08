@@ -50,7 +50,8 @@
     .footer,
     .header,
     .mainNav ul,
-    .count-box .box {
+    .count-box .box,
+    .count-box .box .top span.circle:first-child {
         background-color: $white;
     }
 
@@ -110,5 +111,12 @@
 
     .slider-home .item:after {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    }
+
+    .count-box .box .top span.circle:nth-child(2) {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+    }
+    .count-box .box .top span.circle:nth-child(3) {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
     }
 }
