@@ -152,10 +152,27 @@ $('input#switch').change(function () {
     $(this).parents('.unlock-skill').toggleClass('active');
 });
 
-$('.about-content h3').hover(function () {
-    $(this).addClass('color');
-});
+// $('.about-content h3').hover(function () {
+//     $(this).addClass('color');
+// });
 
+
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    let aboutElement = $('.about');
+    let aboutOffset = aboutElement.offset().top;
+    let aboutHeight = aboutElement.outerHeight();
+    let h3Color = aboutOffset - (aboutHeight * 0.7);
+
+    if (scroll > h3Color) {
+        $('.about-content h3').each(function (i) {
+            var heading = $(this);
+            setTimeout(function () {
+                heading.addClass('color');
+            }, 300 * i);
+        });
+    }
+});
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
