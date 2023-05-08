@@ -725,17 +725,20 @@ section,
   z-index: 9;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 275px;
+  max-width: 345px;
   margin: 0 auto;
-  overflow: hidden;
+  background-image: url(../img/bg-slider.png);
+  border-radius: 48px 48px 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .text-carousel .item {
   position: relative;
   text-align: center;
-  background-color: #1C1C1D;
   height: 66px;
-  padding: 20px 24px;
-  border-radius: 48px 48px 0 0;
+  padding: 24px 24px 20px;
+  overflow: hidden;
 }
 .text-carousel .item:after, .text-carousel .item:before {
   content: "";
