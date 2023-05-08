@@ -187,8 +187,5 @@ $(window).scroll(function () {
             }, 300 * i);
 
         });
-    } else {
-        $('.prgass-section').removeClass('active');
-        $('.prgass-row .col-md-3').removeClass('act_dot');
-    }
+    } 
 });

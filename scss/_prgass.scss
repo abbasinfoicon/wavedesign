@@ -14,7 +14,7 @@
             height: 2px;
             width: 100%;
             top: 21px;
-            transition: 1s;
+            transition: 2.5s;
 
             @media (max-width: 767px) {
                 content: none;
@@ -102,6 +102,12 @@
                     height: 24px;
                     background-color: $orange;
                 }
+            }
+
+
+            h3,
+            ul li {
+                color: $white;
             }
         }
     }

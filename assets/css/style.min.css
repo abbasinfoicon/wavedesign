@@ -1198,7 +1198,7 @@ section,
   height: 2px;
   width: 100%;
   top: 21px;
-  transition: 1s;
+  transition: 2.5s;
 }
 @media (max-width: 767px) {
   .prgass-section:after, .prgass-section::before {
@@ -1280,6 +1280,10 @@ section,
   min-width: 24px;
   height: 24px;
   background-color: #FF9838;
+}
+.prgass-section .act_dot h3,
+.prgass-section .act_dot ul li {
+  color: #ffffff;
 }
 
 .posr {
