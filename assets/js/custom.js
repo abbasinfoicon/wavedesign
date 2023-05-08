@@ -150,6 +150,7 @@ $(".themeChange").click(function () {
 
 $('input#switch').change(function () {
     $(this).parents('.unlock-skill').toggleClass('active');
+    $(this).parents('.unlock').find('.center').toggleClass('active');
 });
 
 // $('.about-content h3').hover(function () {

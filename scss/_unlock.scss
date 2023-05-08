@@ -32,6 +32,16 @@
                 transform-origin: bottom left;
             }
 
+            &.active {
+                background: $orange;
+                box-shadow: 0px 4px 12px $orange;
+
+                .crd {
+                    transform: rotate(-39.27deg);
+
+                }
+            }
+
             &:hover {
                 background: $orange;
                 box-shadow: 0px 4px 12px $orange;

@@ -69,13 +69,12 @@
                 span {
                     &.circle {
                         border-radius: 100%;
-                        background-color: #48484E;
+                        background: #48484E;
                         position: absolute;
                         top: 0;
                         left: 50%;
                         transform: translate(-50%, -50%);
-
-
+                        transition: box-shadow 0.5s ease-in-out;
 
                         &:first-child {
                             width: 2.625rem;

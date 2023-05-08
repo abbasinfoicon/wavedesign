@@ -933,11 +933,12 @@ section,
 }
 .count-box .box .top span.circle {
   border-radius: 100%;
-  background-color: #48484E;
+  background: #48484E;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: box-shadow 0.5s ease-in-out;
 }
 .count-box .box .top span.circle:first-child {
   width: 2.625rem;
@@ -1321,6 +1322,13 @@ section,
   cursor: pointer;
   transition: 0.5s;
   transform-origin: bottom left;
+}
+.unlock-card-box.active {
+  background: #FF9838;
+  box-shadow: 0px 4px 12px #FF9838;
+}
+.unlock-card-box.active .crd {
+  transform: rotate(-39.27deg);
 }
 .unlock-card-box:hover {
   background: #FF9838;
