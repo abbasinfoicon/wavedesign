@@ -61,7 +61,7 @@ $(window).scroll(function () {
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
-    if (scroll > 700) {
+    if (scroll > 1000) {
         $('.mainNav').addClass('sticky');
     } else {
         $('.mainNav').removeClass('sticky');
@@ -79,6 +79,7 @@ $(window).scroll(function () {
         $('#scroll').fadeOut();
     }
 });
+
 $('#scroll').click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
@@ -142,7 +143,9 @@ $('.client-carousel').owlCarousel({
 });
 
 
-// themes color change
+/*========================================================================================================
+================================ Themes change ===================================================================
+===========================================================================================================*/
 $(".themeChange").click(function () {
     $(this).toggleClass('light');
     $("body").toggleClass('light');
@@ -153,11 +156,10 @@ $('input#switch').change(function () {
     $(this).parents('.unlock').find('.center').toggleClass('active');
 });
 
-// $('.about-content h3').hover(function () {
-//     $(this).addClass('color');
-// });
 
-
+/*========================================================================================================
+================================ color change ===================================================================
+===========================================================================================================*/
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     let aboutElement = $('.about');
@@ -188,5 +190,39 @@ $(window).scroll(function () {
             }, 300 * i);
 
         });
-    } 
+    }
+});
+
+/*========================================================================================================
+================================ COUNTER ===================================================================
+===========================================================================================================*/
+
+
+
+var a = 0;
+$(window).scroll(function () {
+
+    var oTop = $('.counter').offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+        $('.counter').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            $({ countNum: $this.text() }).animate({
+                countNum: countTo
+            },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                    }
+                });
+        });
+
+        a = 1;
+    }
+
 });
