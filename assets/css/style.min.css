@@ -807,8 +807,8 @@ section,
   position: relative;
   text-align: center;
   margin-top: 1.25rem;
-  position: sticky;
-  top: 64px;
+  position: fixed;
+  bottom: 0;
   z-index: 99;
 }
 .mainNav ul {
