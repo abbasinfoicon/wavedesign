@@ -1,0 +1,46 @@
+.filter {
+    &s {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+
+        p {
+            color: $txt;
+            margin-bottom: 0;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            li {}
+        }
+    }
+
+    &-content {
+        &-item {
+            .img-style {
+                img {}
+            }
+
+            .project {
+                &-name {
+                    h4 {}
+
+                    h6 {}
+                }
+
+                &-date {
+                    p {}
+                }
+
+                &-desc {
+                    p {}
+
+                    a {}
+                }
+            }
+        }
+    }
+}

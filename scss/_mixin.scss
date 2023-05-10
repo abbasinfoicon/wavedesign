@@ -529,35 +529,3 @@ background-image: url('../img/' + $img + '.' + $extension);
 }
 
 //@include shape(square/circle/triangle/right-triangle/diamond/pentagon/hexagon/octogon, $100px, #f00);
-
-//min-max-query
-@mixin min-max($min, $max) {
-  @media screen and (min-width: $min + px) and (max-width: $max + px) {
-    @content;
-  }
-}
-
-//min-max-query
-@mixin min-max-height($min, $max) {
-  @media screen and (min-height: $min + px) and (max-height: $max + px) {
-    @content;
-  }
-}
-
-//custom-media query
-@mixin mq($screen, $custom) {
-  @if $screen =='min' {
-    @media (min-width: $custom + px) {
-      @content;
-    }
-  }
-
-  @else if $screen =='max' {
-    @media (max-width: $custom + px) {
-      @content;
-    }
-  }
-}
-
-
-//@include mg(min/max, any_size(400));

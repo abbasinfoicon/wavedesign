@@ -91,57 +91,60 @@ $('#scroll').click(function () {
 /*========================================================================================================
 ================================ slider-home owlCarousel ===================================================================
 ===========================================================================================================*/
+if ($('.slider-home').length) {
+    $('.slider-home').owlCarousel({
+        loop: true,
+        autoplay: true,
+        nav: false,
+        dots: false,
+        items: 1,
+        margin: 0,
+        touchDrag: false,
+        mouseDrag: false,
+        animateIn: 'fadeIn', // add this
+        animateOut: 'fadeOut' // and this
+    });
+}
 
-$('.slider-home').owlCarousel({
-    loop: true,
-    autoplay: true,
-    nav: false,
-    dots: false,
-    items: 1,
-    margin: 0,
-    touchDrag: false,
-    mouseDrag: false,
-    animateIn: 'fadeIn', // add this
-    animateOut: 'fadeOut' // and this
-});
+if ($('.text-carousel').length) {
+    $('.text-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 1900,
+        nav: false,
+        dots: false,
+        items: 1,
+        margin: 0,
+        touchDrag: false,
+        mouseDrag: false,
+        animateIn: 'fadeIn', // add this
+        animateOut: 'fadeOut' // and this
+    });
+}
 
-$('.text-carousel').owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 1900,
-    nav: false,
-    dots: false,
-    items: 1,
-    margin: 0,
-    touchDrag: false,
-    mouseDrag: false,
-    animateIn: 'fadeIn', // add this
-    animateOut: 'fadeOut' // and this
-});
-
-
-$('.client-carousel').owlCarousel({
-    loop: true,
-    autoplay: true,
-    nav: false,
-    dots: false,
-    margin: 30,
-    responsive: {
-        0: {
-            items: 1,
-        },
-        600: {
-            items: 4
-        },
-        1200: {
-            items: 6
-        },
-        1366: {
-            items: 7
+if ($('.client-carousel').length) {
+    $('.client-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        nav: false,
+        dots: false,
+        margin: 30,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 4
+            },
+            1200: {
+                items: 6
+            },
+            1366: {
+                items: 7
+            }
         }
-    }
-});
-
+    });
+}
 
 /*========================================================================================================
 ================================ Themes change ===================================================================
@@ -160,69 +163,124 @@ $('input#switch').change(function () {
 /*========================================================================================================
 ================================ color change ===================================================================
 ===========================================================================================================*/
-$(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    let aboutElement = $('.about');
-    let aboutOffset = aboutElement.offset().top;
-    let aboutHeight = aboutElement.outerHeight();
-    let h3Color = aboutOffset - (aboutHeight * 0.8);
+if ($('.about').length) {
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        let aboutElement = $('.about');
+        let aboutOffset = aboutElement.offset().top;
+        let aboutHeight = aboutElement.outerHeight();
+        let h3Color = aboutOffset - (aboutHeight * 0.8);
 
-    if (scroll > h3Color) {
-        $('.about-content h3').each(function (i) {
-            var heading = $(this);
-            setTimeout(function () {
-                heading.addClass('color');
-            }, 500 * i);
-        });
-    }
-});
+        if (scroll > h3Color) {
+            $('.about-content h3').each(function (i) {
+                var heading = $(this);
+                setTimeout(function () {
+                    heading.addClass('color');
+                }, 500 * i);
+            });
+        }
+    });
+}
 
-$(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    let cusHgt = $('.prgass').offset().top - 300;
+if ($('.prgass').length) {
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        let cusHgt = $('.prgass').offset().top - 300;
 
-    if (scroll > cusHgt) {
-        $('.prgass-section').addClass('active');
-        $('.prgass-row .col-md-3').each(function (i) {
-            var row = $(this);
-            setTimeout(function () {
-                row.addClass('act_dot');
-            }, 300 * i);
+        if (scroll > cusHgt) {
+            $('.prgass-section').addClass('active');
+            $('.prgass-row .col-md-3').each(function (i) {
+                var row = $(this);
+                setTimeout(function () {
+                    row.addClass('act_dot');
+                }, 300 * i);
 
-        });
-    }
-});
+            });
+        }
+    });
+}
 
 /*========================================================================================================
 ================================ COUNTER ===================================================================
 ===========================================================================================================*/
+if ($('.counter').length) {
+    var a = 0;
+    $(window).scroll(function () {
 
+        var oTop = $('.counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({ countNum: $this.text() }).animate({
+                    countNum: countTo
+                },
+                    {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        }
+                    });
+            });
 
+            a = 1;
+        }
 
-var a = 0;
-$(window).scroll(function () {
+    });
+}
 
-    var oTop = $('.counter').offset().top - window.innerHeight;
-    if (a == 0 && $(window).scrollTop() > oTop) {
-        $('.counter').each(function () {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-            $({ countNum: $this.text() }).animate({
-                countNum: countTo
-            },
-                {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function () {
-                        $this.text(Math.floor(this.countNum));
-                    },
-                    complete: function () {
-                        $this.text(this.countNum);
-                    }
-                });
-        });
+if ($('.countVal').length) {
+    $('.countVal').each(function () {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        $({ countNum: $this.text() }).animate({
+            countNum: countTo
+        },
+            {
+                duration: 2000,
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                    $this.text(this.countNum);
+                }
+            });
+    });
+}
 
-        a = 1;
-    }
+/*========================================================================================================
+================================ Text Roted ===================================================================
+===========================================================================================================*/
+const text = document.querySelector(".text p");
+text.innerHTML = text.innerText
+    .split("")
+    .map(
+        (char, i) => `<span style="transform:rotate(${i * 5.8}deg)">${char}</span>`
+    )
+    .join("");
 
+/*========================================================================================================
+================================ Filter Page ===================================================================
+===========================================================================================================*/
+$('.filters ul li').click(function () {
+    $('.filters ul li').removeClass('active');
+    $(this).addClass('active');
+
+    var data = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: data
+    })
 });
+
+var $grid = $(".grid").isotope({
+    itemSelector: ".all",
+    percentPosition: true,
+    masonry: {
+        columnWidth: ".all"
+    }
+})

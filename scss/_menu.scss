@@ -37,6 +37,7 @@
                 @include nohemi(medium);
                 color: #958F8F;
                 border-radius: 6px;
+                letter-spacing: 0.05em;
 
                 &:hover {
                     color: $white;
