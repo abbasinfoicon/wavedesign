@@ -535,7 +535,7 @@ section,
     max-width: 720px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .container-fluid,
   .container,
   .container-sm {
@@ -1559,6 +1559,11 @@ section,
   gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
+@media (max-width: 767px) {
+  .filters {
+    flex-direction: column;
+  }
+}
 .filters p {
   color: #717171;
   margin-bottom: 0;
@@ -1600,8 +1605,18 @@ section,
 .filter-content-item .row_project .col-md-3 {
   width: 30%;
 }
+@media (max-width: 991px) {
+  .filter-content-item .row_project .col-md-3 {
+    width: 100%;
+  }
+}
 .filter-content-item .row_project .col-md-8 {
   width: 70%;
+}
+@media (max-width: 991px) {
+  .filter-content-item .row_project .col-md-8 {
+    width: 100%;
+  }
 }
 .filter-content-item .img-style {
   width: 100%;
@@ -1611,18 +1626,45 @@ section,
   overflow: hidden;
   transition: 0.5s;
 }
+@media (max-width: 991px) {
+  .filter-content-item .img-style {
+    height: auto;
+  }
+}
+@media (max-width: 991px) {
+  .filter-content-item .img-style {
+    margin-bottom: 1rem;
+  }
+}
 .filter-content-item .img-style img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 991px) {
+  .filter-content-item .img-style img {
+    height: auto;
+  }
+}
 .filter-content-item .item {
   align-items: center;
+}
+@media (max-width: 991px) {
+  .filter-content-item .item.row .col-lg-6:last-child .row_project {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
 }
 .filter-content-item .project-name {
   width: 100%;
   padding-left: 1.5rem;
+}
+@media (max-width: 991px) {
+  .filter-content-item .project-name {
+    padding-left: 0;
+  }
 }
 .filter-content-item .project-name h4 {
   color: #ffffff;
@@ -1688,6 +1730,11 @@ section,
   padding: 4.375rem 6.875rem;
   margin-bottom: 0.75rem;
 }
+@media (max-width: 991px) {
+  .contact-header {
+    flex-direction: column;
+  }
+}
 .contact-header .heading {
   margin-bottom: 0;
 }
@@ -1746,8 +1793,23 @@ section,
   height: 203px;
   resize: none;
 }
+@media (max-width: 991px) {
+  .contact-form .form-group textarea {
+    height: 150px;
+  }
+}
 .contact-form .form-group.custom-height {
   height: 320px;
+}
+@media (max-width: 991px) {
+  .contact-form .form-group.custom-height {
+    height: 250px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-form .form-group.custom-height {
+    height: auto;
+  }
 }
 .contact-form .form-group.bg_orange {
   background-color: #FF9838;

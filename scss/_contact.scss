@@ -14,6 +14,10 @@
         padding: 4.375rem 6.875rem;
         margin-bottom: 0.75rem;
 
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+
         .heading {
             margin-bottom: 0;
 
@@ -88,10 +92,25 @@
                 textarea {
                     height: 203px;
                     resize: none;
+
+                    @media (max-width: 991px) {
+                        height: 150px;
+
+                    }
                 }
 
                 &.custom-height {
                     height: 320px;
+
+                    @media (max-width: 991px) {
+                        height: 250px;
+
+                    }
+
+                    @media (max-width: 767px) {
+                        height: auto;
+
+                    }
                 }
 
                 &.bg_orange {
