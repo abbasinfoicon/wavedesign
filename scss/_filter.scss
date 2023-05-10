@@ -3,6 +3,7 @@
         display: flex;
         align-items: center;
         gap: 1.25rem;
+        margin-bottom: 1.25rem;
 
         p {
             color: $txt;
@@ -14,33 +15,145 @@
             align-items: center;
             gap: 0.5rem;
 
-            li {}
+            li {
+                font-size: 0.875rem;
+                cursor: pointer;
+                padding: 0.875rem 1.5rem;
+                border-radius: 100px;
+                background-color: $bg;
+                color: $white;
+                letter-spacing: 0.02rem;
+                height: 42px;
+
+                &:hover {
+                    background-color: $txt2;
+                }
+
+                &.active {
+                    background-color: $active;
+                    color: $bg;
+                }
+            }
         }
     }
 
     &-content {
+        margin-bottom: 3.438rem;
+
         &-item {
+            padding: 2.188rem 0;
+            border-top: 1px solid #2A2A2C;
+            width: 100%;
+            cursor: pointer;
+
+            .row {
+                &_project {
+                    align-items: center;
+
+                    .col-md-3 {
+                        width: 30%;
+                    }
+
+                    .col-md-8 {
+                        width: 70%;
+                    }
+                }
+            }
+
             .img-style {
-                img {}
+                width: 100%;
+                height: 7.188rem;
+                filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+                border-radius: 12px;
+                overflow: hidden;
+                transition: .5s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .item {
+                align-items: center;
             }
 
             .project {
                 &-name {
-                    h4 {}
+                    width: 100%;
+                    padding-left: 1.5rem;
 
-                    h6 {}
+                    h4 {
+                        color: $white;
+                        margin-bottom: 0;
+                    }
+
+                    h6 {
+                        color: $orange;
+                    }
                 }
 
                 &-date {
-                    p {}
+                    min-width: 6rem;
+
+                    p {
+                        font-size: 0.75rem;
+                    }
                 }
 
                 &-desc {
-                    p {}
+                    max-width: 500px;
+
+                    p {
+                        color: $white;
+                        margin-bottom: 1.625rem;
+                    }
 
                     a {}
                 }
             }
+
+            &:hover {
+                .img-style {
+                    scale: 1.1;
+                }
+
+                .project {
+                    &-desc {
+                        a {
+                            background-color: $orange;
+                            border-color: $orange;
+                        }
+                    }
+                }
+            }
         }
     }
+}
+
+
+.load-more {
+    text-align: center;
+
+    a {
+        img {
+            animation: rotate 1s infinite;
+            margin-right: 10px;
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mt5rem {
+    margin-top: 5rem;
 }

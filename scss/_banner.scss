@@ -20,13 +20,13 @@
         p {
             @include nohemi(medium);
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.2rem;
             color: $txt;
         }
 
         h3 {
             @include nohemi(medium);
-            letter-spacing: 0.05em;
+            letter-spacing: 0.05rem;
             line-height: 4.5rem;
             color: $white;
 
@@ -67,7 +67,7 @@
                 h3 {
                     font-size: 2rem;
                     color: $white;
-                    letter-spacing: 0.05em;
+                    letter-spacing: 0.05rem;
                     line-height: 2rem;
                     margin-bottom: 1rem;
                 }
@@ -75,7 +75,7 @@
                 p {
                     color: $txt;
                     text-transform: none;
-                    letter-spacing: 0.05em;
+                    letter-spacing: 0.05rem;
                 }
             }
         }

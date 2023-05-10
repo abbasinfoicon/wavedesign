@@ -253,6 +253,7 @@ a:visited {
 p,
 li {
   line-height: 1.4;
+  margin-bottom: 0;
 }
 
 ul {
@@ -489,6 +490,12 @@ section,
 
 .heading {
   margin-bottom: 4.063rem;
+}
+.heading h1 span {
+  color: #FF9838;
+}
+.heading h4 span {
+  color: #FF9838;
 }
 .heading h4 img {
   margin-right: 1rem;
@@ -829,7 +836,7 @@ section,
   font-family: "Nohemi-Medium";
   color: #958F8F;
   border-radius: 6px;
-  letter-spacing: 0.05em;
+  font-family: "Nohemi-Medium";
 }
 .mainNav ul li a:hover {
   color: #ffffff;
@@ -1465,12 +1472,12 @@ section,
 .banner-sec p {
   font-family: "Nohemi-Medium";
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2rem;
   color: #717171;
 }
 .banner-sec h3 {
   font-family: "Nohemi-Medium";
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
   line-height: 4.5rem;
   color: #ffffff;
 }
@@ -1504,14 +1511,14 @@ section,
 .banner-counter ul li h3 {
   font-size: 2rem;
   color: #ffffff;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
 .banner-counter ul li p {
   color: #717171;
   text-transform: none;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
 }
 .banner-animation {
   position: absolute;
@@ -1550,6 +1557,7 @@ section,
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .filters p {
   color: #717171;
@@ -1559,4 +1567,229 @@ section,
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.filters ul li {
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.875rem 1.5rem;
+  border-radius: 100px;
+  background-color: #242425;
+  color: #ffffff;
+  letter-spacing: 0.02rem;
+  height: 42px;
+}
+.filters ul li:hover {
+  background-color: #48484E;
+}
+.filters ul li.active {
+  background-color: #F5F5F5;
+  color: #242425;
+}
+.filter-content {
+  margin-bottom: 3.438rem;
+}
+.filter-content-item {
+  padding: 2.188rem 0;
+  border-top: 1px solid #2A2A2C;
+  width: 100%;
+  cursor: pointer;
+}
+.filter-content-item .row_project {
+  align-items: center;
+}
+.filter-content-item .row_project .col-md-3 {
+  width: 30%;
+}
+.filter-content-item .row_project .col-md-8 {
+  width: 70%;
+}
+.filter-content-item .img-style {
+  width: 100%;
+  height: 7.188rem;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.filter-content-item .img-style img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.filter-content-item .item {
+  align-items: center;
+}
+.filter-content-item .project-name {
+  width: 100%;
+  padding-left: 1.5rem;
+}
+.filter-content-item .project-name h4 {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+.filter-content-item .project-name h6 {
+  color: #FF9838;
+}
+.filter-content-item .project-date {
+  min-width: 6rem;
+}
+.filter-content-item .project-date p {
+  font-size: 0.75rem;
+}
+.filter-content-item .project-desc {
+  max-width: 500px;
+}
+.filter-content-item .project-desc p {
+  color: #ffffff;
+  margin-bottom: 1.625rem;
+}
+.filter-content-item:hover .img-style {
+  scale: 1.1;
+}
+.filter-content-item:hover .project-desc a {
+  background-color: #FF9838;
+  border-color: #FF9838;
+}
+
+.load-more {
+  text-align: center;
+}
+.load-more a img {
+  animation: rotate 1s infinite;
+  margin-right: 10px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mt5rem {
+  margin-top: 5rem;
+}
+
+.contact {
+  background: #111112;
+  border-radius: 32px 32px 0px 0px;
+  padding: 4.375rem 0;
+  margin-bottom: 0;
+}
+.contact-header {
+  background: #1C1C1D;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7.313rem;
+  padding: 4.375rem 6.875rem;
+  margin-bottom: 0.75rem;
+}
+.contact-header .heading {
+  margin-bottom: 0;
+}
+.contact-header .heading h1 {
+  color: #ffffff;
+  letter-spacing: 0.05rem;
+  margin-bottom: 4rem;
+}
+.contact-header .heading .line {
+  max-width: 1049px;
+  background-color: #2A2A2C;
+  border-radius: 4px;
+  height: 1px;
+}
+.contact-header .roket {
+  width: 248px;
+  height: 248px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-header .roket-sec {
+  width: 152px;
+  height: 152px;
+  margin: 0 auto;
+  background-color: #2A2A2C;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-form .form .row .col-md-3 {
+  padding-right: 0;
+}
+.contact-form .form .row .col-md-3:last-child {
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+}
+.contact-form .form-group {
+  background: #1C1C1D;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.contact-form .form-group label {
+  font-size: 0.875rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+  min-height: 30px;
+}
+.contact-form .form-group label span {
+  font-size: 1.25rem;
+  color: #FF9838;
+  font-family: "Nohemi-Bold";
+}
+.contact-form .form-group textarea {
+  height: 203px;
+  resize: none;
+}
+.contact-form .form-group.custom-height {
+  height: 320px;
+}
+.contact-form .form-group.bg_orange {
+  background-color: #FF9838;
+  transition: 0.5s;
+}
+.contact-form .form-group.bg_orange:hover {
+  background-color: #1C1C1D;
+}
+.contact-form .form-group .custom_submit {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-form .form-group .btn-submit {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  color: #ffffff;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.contact-form .form-control {
+  background: #1C1C1D;
+  border-color: #1C1C1D;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Nohemi-Medium";
+  letter-spacing: 0.05rem;
+}
+.contact-form .form-control::-moz-placeholder {
+  color: #8D8C98;
+  font-family: "Nohemi-Regular";
+}
+.contact-form .form-control::placeholder {
+  color: #8D8C98;
+  font-family: "Nohemi-Regular";
 }/*# sourceMappingURL=style.min.css.map */
