@@ -7,11 +7,14 @@
     text-align: center;
     margin-top: 1.25rem;
 
-    &.sticky {
-        position: fixed;
-        bottom: 0;
-        z-index: 99;
-    }
+    position: sticky;
+    top: 64px;
+    z-index: 99;
+
+    // &.sticky {
+    //     position: fixed;
+    //     bottom: 0;
+    // }
 
     ul {
         display: inline-flex;

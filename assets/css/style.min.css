@@ -807,10 +807,8 @@ section,
   position: relative;
   text-align: center;
   margin-top: 1.25rem;
-}
-.mainNav.sticky {
-  position: fixed;
-  bottom: 0;
+  position: sticky;
+  top: 64px;
   z-index: 99;
 }
 .mainNav ul {
@@ -1520,11 +1518,28 @@ section,
   text-transform: none;
   letter-spacing: 0.05rem;
 }
-.banner-animation {
+.crcl {
   position: absolute;
+  position: absolute;
+  right: -243px;
+  bottom: -243px;
+  width: 486px;
+  height: 486px;
+}
+.crcl .boxShadow {
+  background: rgba(255, 152, 56, 0.08);
+  filter: blur(100px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   right: 0;
 }
-.banner-animation .circle {
+.crcl img {
+  position: absolute;
+  animation: rotateText 12s linear infinite;
+}
+.crcl .circle {
   position: relative;
   width: var(--d-outer);
   height: var(--d-outer);
@@ -1533,13 +1548,13 @@ section,
   justify-content: center;
   align-items: center;
 }
-.banner-animation .circle .text {
+.crcl .circle .text {
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: rotateText 10s linear infinite;
+  animation: rotateText 15s linear infinite;
 }
-.banner-animation .circle .text p span {
+.crcl .circle .text p span {
   position: absolute;
   left: 50%;
   transform-origin: 0 var(--radius);
