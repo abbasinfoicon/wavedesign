@@ -1,7 +1,12 @@
-const text = document.querySelector(".text p");
-text.innerHTML = text.innerText
-    .split("")
-    .map(
-        (char, i) => `<span style="transform:rotate(${i * 5.8}deg)">${char}</span>`
-    )
-    .join("");
+const circleType = new CircleType(document.getElementById('showreel')).radius(65);
+
+$(window).scroll(function() {
+  var off = $(window).scrollTop();
+  off *= 0.4;
+  gsap.to('.circular-text', {
+    ease: "power3.out", transform: 'rotate('+off+'deg)'
+  });
+  // $(".circular-text").css({
+  //   'transform': 'rotate('+off+'deg)'
+  // });
+});

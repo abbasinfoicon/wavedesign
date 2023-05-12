@@ -1762,6 +1762,7 @@ section,
   height: 1px;
 }
 .contact-header .roket {
+  position: relative;
   width: 248px;
   height: 248px;
   display: flex;
@@ -1777,6 +1778,23 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.contact-header .roket .circle {
+  position: relative;
+}
+.contact-header .roket .circle .circle-roted {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  transform-origin: center;
+  animation: rotateText2 15s linear infinite;
+}
+.contact-header .roket .circle .circle-roted .circular-text #showreel {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.875rem;
 }
 .contact-form .form .row .col-md-3 {
   padding-right: 0;
@@ -1866,4 +1884,28 @@ section,
 .contact-form .form-control::placeholder {
   color: #8D8C98;
   font-family: "Nohemi-Regular";
+}
+
+@keyframes rotateText2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(240deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(100deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(115deg);
+  }
+  35% {
+    transform: translate(-50%, -50%) rotate(100deg);
+  }
+  40% {
+    transform: translate(-50%, -50%) rotate(240deg);
+  }
+  45% {
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(240deg);
+  }
 }/*# sourceMappingURL=style.min.css.map */
