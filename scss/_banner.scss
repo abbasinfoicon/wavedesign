@@ -84,10 +84,9 @@
     &-animation {
         svg {
             animation: rotateText 15s linear infinite;
-            padding: 25px;
 
             textPath {
-                font-size: 4.5px;
+                font-size: 4px;
                 fill: $orange;
                 animation: rotateText 15s linear infinite;
                 text-transform: uppercase;
@@ -121,8 +120,6 @@
 
     .circle {
         position: relative;
-        width: var(--d-outer);
-        height: var(--d-outer);
         border-radius: 50%;
         display: flex;
         justify-content: center;

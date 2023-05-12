@@ -1520,10 +1520,9 @@ section,
 }
 .banner-animation svg {
   animation: rotateText 15s linear infinite;
-  padding: 25px;
 }
 .banner-animation svg textPath {
-  font-size: 4.5px;
+  font-size: 4px;
   fill: #FF9838;
   animation: rotateText 15s linear infinite;
   text-transform: uppercase;
@@ -1552,8 +1551,6 @@ section,
 }
 .crcl .circle {
   position: relative;
-  width: var(--d-outer);
-  height: var(--d-outer);
   border-radius: 50%;
   display: flex;
   justify-content: center;
