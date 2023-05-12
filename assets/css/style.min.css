@@ -957,11 +957,34 @@ section,
   transform: scaleX(1.11);
 }
 
+.leftNewbtn {
+  margin-bottom: 6.875rem;
+  position: relative;
+  display: inline-block;
+  padding: 20px 64px;
+}
+.leftNewbtn:before {
+  content: "";
+  width: 43px;
+  height: 64px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background: #FF9838;
+  border-radius: 100px;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.leftNewbtn:hover:before {
+  width: 100%;
+}
 .leftNewbtn a {
   color: #F5F5F5;
   font-size: 0.875rem;
   letter-spacing: 0.1rem;
   font-family: "Nohemi-Medium";
+  position: relative;
+  z-index: 9;
 }
 /*=====================================================================
 ==========================   Count scss  =========================
