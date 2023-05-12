@@ -1518,6 +1518,16 @@ section,
   text-transform: none;
   letter-spacing: 0.05rem;
 }
+.banner-animation svg {
+  animation: rotateText 15s linear infinite;
+}
+.banner-animation svg textPath {
+  font-size: 4px;
+  fill: #FF9838;
+  animation: rotateText 15s linear infinite;
+  text-transform: uppercase;
+}
+
 .crcl {
   position: absolute;
   position: absolute;

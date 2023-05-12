@@ -81,7 +81,18 @@
         }
     }
 
-    &-animation {}
+    &-animation {
+        svg {
+            animation: rotateText 15s linear infinite;
+
+            textPath {
+                font-size: 4px;
+                fill: $orange;
+                animation: rotateText 15s linear infinite;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 .crcl {

@@ -1,7 +1,3 @@
-svg {
-    fill: currentColor;
-    height: auto;
-    max-width: 66vmin;
-    transform-origin: center;
-    width: 66%;
-  }
+textPath {
+    font-size: 4.9px;
+}
