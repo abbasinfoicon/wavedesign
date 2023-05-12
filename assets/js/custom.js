@@ -126,6 +126,11 @@ if ($('.client-carousel').length) {
     $('.client-carousel').owlCarousel({
         loop: true,
         autoplay: true,
+        autoplay: true,
+        slideTransition: 'linear',
+        autoplayTimeout: 2000,
+        autoplaySpeed: 2000,
+        autoplayHoverPause: true,
         nav: false,
         dots: false,
         margin: 30,
@@ -257,7 +262,13 @@ if ($('.countVal').length) {
 ================================ Text circle ===================================================================
 ===========================================================================================================*/
 
-const circleType = new CircleType(document.getElementById('showreel')).radius(110);
+$(document).ready(function () {
+    function circleText() {
+        const circleType = new CircleType(document.getElementById('showreel')).radius(110);
+    }
+    setTimeout(circleText, 1000)
+});
+
 
 
 /*========================================================================================================
