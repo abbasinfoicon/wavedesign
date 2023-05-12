@@ -1520,9 +1520,10 @@ section,
 }
 .banner-animation svg {
   animation: rotateText 15s linear infinite;
+  padding: 25px;
 }
 .banner-animation svg textPath {
-  font-size: 4px;
+  font-size: 4.5px;
   fill: #FF9838;
   animation: rotateText 15s linear infinite;
   text-transform: uppercase;
@@ -1557,17 +1558,6 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.crcl .circle .text {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  animation: rotateText 15s linear infinite;
-}
-.crcl .circle .text p span {
-  position: absolute;
-  left: 50%;
-  transform-origin: 0 var(--radius);
 }
 
 @keyframes rotateText {

@@ -84,9 +84,10 @@
     &-animation {
         svg {
             animation: rotateText 15s linear infinite;
+            padding: 25px;
 
             textPath {
-                font-size: 4px;
+                font-size: 4.5px;
                 fill: $orange;
                 animation: rotateText 15s linear infinite;
                 text-transform: uppercase;
@@ -126,22 +127,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        .text {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            animation: rotateText 15s linear infinite;
-
-            p {
-
-                span {
-                    position: absolute;
-                    left: 50%;
-                    transform-origin: 0 var(--radius);
-                }
-            }
-        }
     }
 }
 
