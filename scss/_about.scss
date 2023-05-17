@@ -11,6 +11,8 @@
             color: #2A2A2C;
             font-size: 3rem;
             transition: color .5s;
+            margin-bottom: 0;
+            letter-spacing: 0.05rem;
 
             &.color {
                 color: $white;
@@ -19,8 +21,11 @@
         }
 
         a {
-            display: inline-block;
             margin-top: 3.125rem;
+
+            i {
+                margin-left: 1.125rem;
+            }
         }
     }
 }
@@ -65,6 +70,10 @@
         cursor: pointer;
 
         .img-style {
+            width: 116px;
+            height: 116px;
+            margin: 0 auto;
+
             img {
                 transition: .5s;
             }
@@ -83,6 +92,12 @@
                 }
             }
         }
+    }
+}
+
+.aboutService {
+    .container-fluid {
+        max-width: 1800px;
     }
 }
 

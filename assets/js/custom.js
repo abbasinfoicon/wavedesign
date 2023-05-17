@@ -36,8 +36,8 @@ jQuery('.progress-wrap').on('click', function (event) {
 // Preloader
 var win = $(window);
 win.on('load', function () {
-    $('#pre-loader').delay(350).fadeOut('slow');
-    $('body').delay(350).css({
+    $('#pre-loader').delay(100).fadeOut('slow');
+    $('body').delay(100).css({
         'overflow': 'visible'
     });
 })
@@ -57,11 +57,10 @@ $(window).scroll(function () {
         $('.header').removeClass('sticky');
     }
 });
-
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
-    if (scroll > 1000) {
+    if (scroll > 5) {
         $('.mainNav').addClass('sticky');
     } else {
         $('.mainNav').removeClass('sticky');
@@ -93,7 +92,7 @@ $('#scroll').click(function () {
 ===========================================================================================================*/
 if ($('.slider-home').length) {
     $('.slider-home').owlCarousel({
-        loop: true,
+        loop: false,
         autoplay: true,
         nav: false,
         dots: false,
@@ -181,7 +180,7 @@ if ($('.about').length) {
                 var heading = $(this);
                 setTimeout(function () {
                     heading.addClass('color');
-                }, 500 * i);
+                }, 350 * i);
             });
         }
     });
@@ -261,14 +260,12 @@ if ($('.countVal').length) {
 /*========================================================================================================
 ================================ Text circle ===================================================================
 ===========================================================================================================*/
-
-$(document).ready(function () {
+if ($('#showreel').length) {
     function circleText() {
         const circleType = new CircleType(document.getElementById('showreel')).radius(110);
     }
     setTimeout(circleText, 1000)
-});
-
+}
 
 
 /*========================================================================================================
@@ -284,14 +281,15 @@ $('.filters ul li').click(function () {
     })
 });
 
-var $grid = $(".grid").isotope({
-    itemSelector: ".all",
-    percentPosition: true,
-    masonry: {
-        columnWidth: ".all"
-    }
-})
-
+if ($('.grid').length) {
+    var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        percentPosition: true,
+        masonry: {
+            columnWidth: ".all"
+        }
+    })
+}
 
 /*========================================================================================================
 ================================ Filter Page ===================================================================

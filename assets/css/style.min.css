@@ -301,8 +301,8 @@ input:visited {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
 }
 
 /* Track */
@@ -312,13 +312,13 @@ input:visited {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FF9838;
+  background: #48484E;
   border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #48484E;
+  background: #FF9838;
 }
 
 /*========================================================================================================
@@ -356,9 +356,8 @@ input:visited {
 }
 .header-lgTheme .lauguage select {
   border: none;
-  font-size: 1rem;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-size: 0.875rem;
+  font-family: "Nohemi-Medium";
 }
 .header-lgTheme .lauguage select:focus {
   outline: none;
@@ -403,6 +402,7 @@ input:visited {
   position: fixed;
   top: 0;
   z-index: 99;
+  border-bottom: 1px solid #242425;
 }
 
 /*========================================================================================================
@@ -451,7 +451,7 @@ input:visited {
 }
 .footer-link p {
   font-size: 0.875rem;
-  margin-bottom: 0.813re;
+  margin-bottom: 0.813rem;
 }
 .footer-link ul li {
   margin-bottom: 10px;
@@ -494,11 +494,20 @@ section,
 .heading h1 span {
   color: #FF9838;
 }
+.heading h2 {
+  letter-spacing: 0.05rem;
+}
+.heading h4 {
+  letter-spacing: 0.12rem;
+}
 .heading h4 span {
   color: #FF9838;
 }
 .heading h4 img {
   margin-right: 1rem;
+}
+.heading h3 {
+  letter-spacing: 0.05rem;
 }
 .heading h3 span {
   color: #FF9838;
@@ -513,7 +522,7 @@ section,
   font-family: "Nohemi-Medium";
   text-transform: uppercase;
   font-size: 0.875rem;
-  padding: 1.5rem 2.35rem;
+  padding: 2.063rem 2.5rem 1.813rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -522,6 +531,29 @@ section,
   border: 1px solid;
   border-radius: 1.5rem;
   letter-spacing: 1.5px;
+}
+.btn-custom i {
+  position: relative;
+  top: -2px;
+  margin-left: 1.125rem;
+}
+
+hr {
+  margin: 1.35rem 0;
+}
+
+.bordeRadius {
+  position: relative;
+}
+.bordeRadius:before {
+  content: "";
+  position: absolute;
+  height: 81px;
+  bottom: -7.5rem;
+  border-radius: 30px;
+  width: 100%;
+  z-index: 9999;
+  background-color: #1C1C1D;
 }
 
 @media (min-width: 576px) {
@@ -586,6 +618,8 @@ section,
   width: 100%;
   position: relative;
   border: 1px solid #2A2A2C;
+  border-radius: 4px;
+  height: 0;
 }
 
 /*=====================================================================
@@ -694,6 +728,68 @@ section,
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
 }
 
+/* The container must be positioned relative: */
+.lauguage {
+  position: relative;
+}
+.lauguage select {
+  display: none;
+}
+
+.select-selected {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0.625rem 0.813rem;
+  cursor: pointer;
+  border-radius: 12px 12px 0 0;
+  font-size: 0.875rem;
+  font-family: "Nohemi-Medium";
+}
+.select-selected:after {
+  content: none;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #ffffff transparent transparent transparent;
+}
+.select-selected.select-arrow-active {
+  background-color: #242425;
+  color: #48484E;
+}
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #ffffff transparent;
+  top: 7px;
+}
+.select-items {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  background-color: #242425;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.select-items div {
+  font-size: 0.875rem;
+  font-family: "Nohemi-Medium";
+  color: #ffffff;
+  padding: 0.625rem 0.813rem;
+  cursor: pointer;
+}
+.select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.select .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.select-hide {
+  display: none;
+}
+
 /*=====================================================================
 ==========================   Slider scss  =========================
 ========================================================================*/
@@ -729,6 +825,7 @@ section,
 .slider-home .item-content p {
   font-family: "Nohemi-Medium";
   letter-spacing: 3px;
+  margin-bottom: 1.75rem;
 }
 .slider-home .item-content h2 {
   font-family: "Nohemi-Medium";
@@ -769,6 +866,7 @@ section,
   margin: 0;
   padding: 0;
   animation: txt 2s alternate infinite;
+  letter-spacing: 0.2em;
 }
 .text-carousel .item .line {
   position: absolute;
@@ -810,8 +908,10 @@ section,
   position: relative;
   text-align: center;
   margin-top: 1.25rem;
+}
+.mainNav.sticky {
   position: fixed;
-  bottom: 30px;
+  bottom: 1rem;
   z-index: 99;
 }
 .mainNav ul {
@@ -819,7 +919,7 @@ section,
   align-items: center;
   justify-content: center;
   background: #242425;
-  border: 1px solid #242425;
+  border: 1px solid #2A2A2C;
   box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   padding: 8px;
@@ -863,6 +963,9 @@ section,
   transform: translateY(-50%);
   background-color: #48484E;
 }
+.mainNav ul li.social a {
+  font-size: 1rem;
+}
 .mainNav ul li.active a {
   color: #242425;
   background: #F5F5F5;
@@ -880,14 +983,18 @@ section,
   color: #2A2A2C;
   font-size: 3rem;
   transition: color 0.5s;
+  margin-bottom: 0;
+  letter-spacing: 0.05rem;
 }
 .about-content h3.color {
   color: #ffffff;
   transition: color 1s ease-in-out;
 }
 .about-content a {
-  display: inline-block;
   margin-top: 3.125rem;
+}
+.about-content a i {
+  margin-left: 1.125rem;
 }
 
 .bg_black {
@@ -924,6 +1031,11 @@ section,
   justify-content: center;
   cursor: pointer;
 }
+.service-box .img-style {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto;
+}
 .service-box .img-style img {
   transition: 0.5s;
 }
@@ -934,6 +1046,10 @@ section,
 }
 .service-box:hover .img-style img {
   scale: 1.1;
+}
+
+.aboutService .container-fluid {
+  max-width: 1800px;
 }
 
 .demo-gif {
@@ -1039,6 +1155,9 @@ section,
 }
 .count-box .box .top p {
   margin-bottom: 0;
+  text-transform: none;
+  font-family: "Nohemi-Regular";
+  letter-spacing: 0.05rem;
 }
 .count-box .box .top .sendwatch {
   position: relative;
@@ -1055,13 +1174,13 @@ section,
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
 }
 .count-box .box .top span.circle:first-child {
   width: 2.625rem;
   height: 2.625rem;
   z-index: 3;
   background: #48484E;
-  box-shadow: 0px 0px 4px #E99B53;
 }
 .count-box .box .top span.circle:nth-child(2) {
   width: 17.5rem;
@@ -1077,10 +1196,14 @@ section,
 }
 .count-box .box h2 {
   font-family: "Nohemi-Medium";
+  letter-spacing: 0.05rem;
+  line-height: 4.5rem;
+  margin-bottom: 0;
 }
 .count-box .box p {
   font-family: "Nohemi-SemiBold";
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 .count-box .box:hover h2 {
   color: #FF9838;
@@ -1259,6 +1382,7 @@ section,
 .project-grid .content-style {
   width: 85%;
   padding: 1rem;
+  padding-top: 0;
 }
 @media (max-width: 991px) {
   .project-grid .content-style {
@@ -1300,6 +1424,15 @@ section,
   .project .row .row_custom_col:nth-child(5n) .project-grid {
     margin-top: 5.375rem;
   }
+}
+.project .heading a {
+  font-size: 0.75rem;
+  height: 50px;
+  padding: 1rem 2.25rem 1rem;
+  border-radius: 20px;
+}
+.project .heading a i {
+  margin-left: 0.625rem;
 }
 
 /*=====================================================================

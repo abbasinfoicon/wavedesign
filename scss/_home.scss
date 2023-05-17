@@ -22,7 +22,13 @@ section,
     }
   }
 
+  h2 {
+    letter-spacing: 0.05rem;
+  }
+
   h4 {
+    letter-spacing: 0.12rem;
+
     span {
       color: $orange;
     }
@@ -33,7 +39,7 @@ section,
   }
 
   h3 {
-
+    letter-spacing: 0.05rem;
 
     span {
       color: $orange;
@@ -52,7 +58,7 @@ section,
     @include nohemi(medium);
     text-transform: uppercase;
     font-size: 0.875rem;
-    padding: 1.5rem 2.35rem;
+    padding: 2.063rem 2.5rem 1.813rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +67,32 @@ section,
     border: 1px solid;
     border-radius: 1.5rem;
     letter-spacing: 1.5px;
+
+
+    i {
+      position: relative;
+      top: -2px;
+      margin-left: 1.125rem;
+    }
+  }
+}
+
+hr {
+  margin: 1.35rem 0;
+}
+
+.bordeRadius {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 81px;
+    bottom: -7.5rem;
+    border-radius: 30px;
+    width: 100%;
+    z-index: 9999;
+    background-color: $blk;
   }
 }
 
@@ -109,4 +141,6 @@ section,
 .divider {
   @include full-width;
   border: 1px solid #2A2A2C;
+  border-radius: 4px;
+  height: 0;
 }
