@@ -975,25 +975,30 @@ hr {
 /*=====================================================================
 ==========================   About scss  =========================
 ========================================================================*/
-.about-content {
+.about-content,
+.aboutService-content {
   text-align: center;
   margin-top: 5rem;
 }
-.about-content h3 {
+.about-content h3,
+.aboutService-content h3 {
   color: #2A2A2C;
   font-size: 3rem;
   transition: color 0.5s;
   margin-bottom: 0;
   letter-spacing: 0.05rem;
 }
-.about-content h3.color {
+.about-content h3.color,
+.aboutService-content h3.color {
   color: #ffffff;
   transition: color 1s ease-in-out;
 }
-.about-content a {
+.about-content a,
+.aboutService-content a {
   margin-top: 3.125rem;
 }
-.about-content a i {
+.about-content a i,
+.aboutService-content a i {
   margin-left: 1.125rem;
 }
 

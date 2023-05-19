@@ -176,7 +176,29 @@ if ($('.about').length) {
         let h3Color = aboutOffset - (aboutHeight * 0.8);
 
         if (scroll > h3Color) {
-            $('.about-content h3').each(function (i) {
+            $('.about .about-content h3').each(function (i) {
+                var heading = $(this);
+                setTimeout(function () {
+                    heading.addClass('color');
+                }, 350 * i);
+            });
+        }
+    });
+}
+
+if ($('.aboutService').length) {
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        let aboutElement = $('.about-content');
+        let aboutOffset = aboutElement.offset().top;
+        let aboutHeight = aboutElement.outerHeight();
+        let h3Color = aboutOffset - (aboutHeight * 0.8);
+
+        console.log("aboutElement", aboutElement)
+        console.log("aboutOffset", aboutOffset)
+
+        if (scroll > h3Color) {
+            $('.aboutService .about-content h3').each(function (i) {
                 var heading = $(this);
                 setTimeout(function () {
                     heading.addClass('color');
@@ -266,7 +288,6 @@ if ($('#showreel').length) {
     }
     setTimeout(circleText, 1000)
 }
-
 
 /*========================================================================================================
 ================================ Filter Page ===================================================================
