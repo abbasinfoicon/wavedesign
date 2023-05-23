@@ -289,6 +289,22 @@ if ($('#showreel').length) {
     setTimeout(circleText, 1000)
 }
 
+
+if ($('.service-box').length) {
+    const playerContainers = document.querySelectorAll(".service-box");
+    playerContainers.forEach(container => {
+        container.addEventListener("mouseover", () => {
+            const player = container.querySelector("lottie-player");
+            player.play();
+        });
+
+        container.addEventListener("mouseleave", () => {
+            const player = container.querySelector("lottie-player");
+            player.stop();
+        });
+    });
+}
+
 /*========================================================================================================
 ================================ Filter Page ===================================================================
 ===========================================================================================================*/
