@@ -22,6 +22,8 @@
             text-transform: uppercase;
             letter-spacing: 0.2rem;
             color: $txt;
+            margin-bottom: 2rem;
+            color: $txt3;
         }
 
         h3 {
@@ -40,9 +42,10 @@
         ul {
             display: flex;
             align-items: center;
+            margin-top: 9.875rem;
 
             li {
-                padding: 4.406rem;
+                padding: 0 4.406rem;
                 position: relative;
 
                 &:after {
@@ -73,7 +76,7 @@
                 }
 
                 p {
-                    color: $txt;
+                    color: $txt3;
                     text-transform: none;
                     letter-spacing: 0.05rem;
                 }

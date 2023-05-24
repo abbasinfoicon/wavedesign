@@ -528,8 +528,8 @@ section,
   justify-content: center;
   height: 61px;
   line-height: 0;
-  border: 1px solid;
-  border-radius: 1.5rem;
+  border: 1px solid #48484E;
+  border-radius: 1.25rem;
   letter-spacing: 1.5px;
 }
 .btn-custom i {
@@ -832,6 +832,10 @@ hr {
   letter-spacing: 3px;
   line-height: 1;
   margin-bottom: 1.875rem;
+}
+.slider-home .item-content a {
+  border-color: #8D8C98;
+  border-radius: 1.5rem;
 }
 .slider-home .item-content a i {
   margin-left: 1rem;
@@ -1709,6 +1713,8 @@ hr {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: #717171;
+  margin-bottom: 2rem;
+  color: #8D8C98;
 }
 .banner-sec h3 {
   font-family: "Nohemi-Medium";
@@ -1722,9 +1728,10 @@ hr {
 .banner-counter ul {
   display: flex;
   align-items: center;
+  margin-top: 9.875rem;
 }
 .banner-counter ul li {
-  padding: 4.406rem;
+  padding: 0 4.406rem;
   position: relative;
 }
 .banner-counter ul li:after {
@@ -1751,7 +1758,7 @@ hr {
   margin-bottom: 1rem;
 }
 .banner-counter ul li p {
-  color: #717171;
+  color: #8D8C98;
   text-transform: none;
   letter-spacing: 0.05rem;
 }
@@ -1814,7 +1821,7 @@ hr {
   }
 }
 .filters p {
-  color: #717171;
+  color: #8D8C98;
   margin-bottom: 0;
 }
 .filters ul {
@@ -1831,6 +1838,7 @@ hr {
   color: #ffffff;
   letter-spacing: 0.02rem;
   height: 42px;
+  transition: 0.5s;
 }
 .filters ul li:hover {
   background-color: #48484E;
@@ -1918,6 +1926,7 @@ hr {
 .filter-content-item .project-name h4 {
   color: #ffffff;
   margin-bottom: 0;
+  transition: 0.5s;
 }
 .filter-content-item .project-name h6 {
   color: #FF9838;
@@ -1935,8 +1944,18 @@ hr {
   color: #ffffff;
   margin-bottom: 1.625rem;
 }
+.filter-content-item .project-desc a {
+  height: 52px;
+  padding: 17px 2.5rem 13px;
+  border: 1px solid #48484E;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
 .filter-content-item:hover .img-style {
   scale: 1.1;
+}
+.filter-content-item:hover .project-name h4 {
+  font-size: 2.5rem;
 }
 .filter-content-item:hover .project-desc a {
   background-color: #FF9838;
@@ -2040,6 +2059,30 @@ hr {
 .contact-form .form .row .col-md-3:last-child {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
 }
+.contact-form .form .row_custom > * {
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+}
+.contact-form .form .row_custom > *:first-child {
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+.contact-form .form .row_custom > *:last-child {
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+}
+@media (max-width: 991px) {
+  .contact-form .form .row_custom > *:nth-child(odd) {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+  .contact-form .form .row_custom > *:nth-child(even) {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+  }
+}
+@media (max-width: 767px) {
+  .contact-form .form .row_custom > * {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+  }
+}
 .contact-form .form-group {
   background: #1C1C1D;
   border-radius: 20px;
@@ -2106,6 +2149,9 @@ hr {
   font-size: 1.125rem;
   text-transform: uppercase;
   margin: 0 auto;
+}
+.contact-form .form-group.disabled {
+  background-color: #1C1C1D;
 }
 .contact-form .form-control {
   background: #1C1C1D;

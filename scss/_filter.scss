@@ -10,7 +10,7 @@
         }
 
         p {
-            color: $txt;
+            color: $txt3;
             margin-bottom: 0;
         }
 
@@ -28,6 +28,7 @@
                 color: $white;
                 letter-spacing: 0.02rem;
                 height: 42px;
+                transition: .5s;
 
                 &:hover {
                     background-color: $txt2;
@@ -129,6 +130,7 @@
                     h4 {
                         color: $white;
                         margin-bottom: 0;
+                        transition: .5s;
                     }
 
                     h6 {
@@ -152,7 +154,13 @@
                         margin-bottom: 1.625rem;
                     }
 
-                    a {}
+                    a {
+                        height: 52px;
+                        padding: 17px 2.5rem 13px;
+                        border: 1px solid $txt2;
+                        border-radius: 20px;
+                        font-size: 0.75rem;
+                    }
                 }
             }
 
@@ -162,6 +170,13 @@
                 }
 
                 .project {
+
+                    &-name {
+                        h4 {
+                            font-size: 2.5rem;
+                        }
+                    }
+
                     &-desc {
                         a {
                             background-color: $orange;
