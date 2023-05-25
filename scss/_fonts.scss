@@ -37,3 +37,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Nohemi-Light';
+  src: url('#{$fontPath}/nohemi/Nohemi-Light.woff2') format('woff2'),
+  url('#{$fontPath}/nohemi/Nohemi-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

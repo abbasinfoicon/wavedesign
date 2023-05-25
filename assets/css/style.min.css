@@ -45,6 +45,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Nohemi-Light";
+  src: url("../fonts/nohemi/Nohemi-Light.woff2") format("woff2"), url("../fonts/nohemi/Nohemi-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 /*=====================================================================
 ==========================   all typstyle scss  =========================
 ========================================================================*/
@@ -1805,7 +1812,7 @@ hr {
   font-size: 6px;
   fill: #ffffff;
   text-transform: uppercase;
-  font-family: "Nohemi-Regular";
+  font-family: "Nohemi-Light";
   letter-spacing: 0.05rem;
 }
 
@@ -2051,8 +2058,8 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 240px;
-  height: 240px;
+  width: 250px;
+  height: 250px;
   transform: translate(-50%, -50%);
   transform-origin: center;
   animation: rotateText2 15s linear infinite;
