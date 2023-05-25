@@ -130,6 +130,17 @@
     }
 }
 
+.circle {
+    svg {
+        textPath {
+            font-size: 6.5px;
+            fill: $white;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
 @keyframes rotateText {
     0% {
         transform: rotate(360deg);

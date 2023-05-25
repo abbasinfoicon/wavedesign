@@ -282,11 +282,11 @@ if ($('.countVal').length) {
 /*========================================================================================================
 ================================ Text circle ===================================================================
 ===========================================================================================================*/
-if ($('#showreel').length) {
-    function circleText() {
-        const circleType = new CircleType(document.getElementById('showreel')).radius(110);
-    }
-    setTimeout(circleText, 1000)
+if ($('.circle-roted').length) {
+    // const circleType = new CircleType(document.getElementById('showreel')).radius(110);
+
+    const text = document.querySelector(".text p");
+    text.innerHTML = text.innerText.split("").map((char, i) => `<span style="transform:rotate(${i * 5.8}deg)">${char}</span>`).join("");
 }
 
 
@@ -328,6 +328,10 @@ if ($('.grid').length) {
     })
 }
 
+
+/*========================================================================================================
+================================ Form Validation ===================================================================
+===========================================================================================================*/
 $(document).ready(function () {
     $('.form-group > *').focus();
     $('.form-group > *').on('input', function () {
@@ -336,21 +340,15 @@ $(document).ready(function () {
         else
             $(this).parent().removeClass('focused');
     });
-});
 
-
-$(document).ready(function () {
-    // Listen for changes in the required fields
     $('.form-control[required]').on('input', function () {
         var allFilled = true;
         $('.form-control[required]').each(function () {
             if ($(this).val() === '') {
                 allFilled = false;
-                return false; // exit the loop if any field is empty
+                return false;
             }
         });
-
-        // Enable or disable the button based on the form completion
         if (allFilled) {
             $('.btn-submit').prop('disabled', false);
         } else {
