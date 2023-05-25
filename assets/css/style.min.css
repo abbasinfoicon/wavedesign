@@ -2089,6 +2089,9 @@ hr {
   padding: 2.5rem;
   margin-bottom: 0.75rem;
 }
+.contact-form .form-group.focused {
+  background-color: #242425;
+}
 .contact-form .form-group label {
   font-size: 0.875rem;
   color: #ffffff;
@@ -2122,14 +2125,8 @@ hr {
     height: auto;
   }
 }
-.contact-form .form-group.bg_orange {
-  background-color: #FF9838;
-  transition: 0.5s;
-}
-.contact-form .form-group.bg_orange:hover {
-  background-color: #1C1C1D;
-}
 .contact-form .form-group .custom_submit {
+  position: relative;
   height: 100%;
   display: flex;
   align-items: center;
@@ -2149,13 +2146,25 @@ hr {
   font-size: 1.125rem;
   text-transform: uppercase;
   margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
 }
-.contact-form .form-group.disabled {
+.contact-form .form-group .btn-submit.bg_orange {
+  background-color: #FF9838;
+  transition: 0.5s;
+}
+.contact-form .form-group .btn-submit.bg_orange:hover {
   background-color: #1C1C1D;
 }
+.contact-form .form-group .btn-submit.disabled, .contact-form .form-group .btn-submit[disabled] {
+  background-color: #1C1C1D;
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+}
 .contact-form .form-control {
-  background: #1C1C1D;
-  border-color: #1C1C1D;
+  background: transparent;
+  border: none;
   padding: 0;
   color: #ffffff;
   font-family: "Nohemi-Medium";

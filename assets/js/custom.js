@@ -328,18 +328,34 @@ if ($('.grid').length) {
     })
 }
 
-/*========================================================================================================
-================================ Filter Page ===================================================================
-===========================================================================================================*/
+$(document).ready(function () {
+    $('.form-group > *').focus();
+    $('.form-group > *').on('input', function () {
+        if ($(this).val().trim() != '')
+            $(this).parent().addClass('focused');
+        else
+            $(this).parent().removeClass('focused');
+    });
+});
 
-var $btns = $('.btn').click(function () {
-    if (this.id == 'all') {
-        $('#parent > div').fadeIn(450);
-    } else {
-        var $el = $('.' + this.id).fadeIn(450);
-        $('#parent > div').not($el).hide();
-    }
-    $btns.removeClass('active');
-    $(this).addClass('active');
-})
+
+$(document).ready(function () {
+    // Listen for changes in the required fields
+    $('.form-control[required]').on('input', function () {
+        var allFilled = true;
+        $('.form-control[required]').each(function () {
+            if ($(this).val() === '') {
+                allFilled = false;
+                return false; // exit the loop if any field is empty
+            }
+        });
+
+        // Enable or disable the button based on the form completion
+        if (allFilled) {
+            $('.btn-submit').prop('disabled', false);
+        } else {
+            $('.btn-submit').prop('disabled', true);
+        }
+    });
+});
 
