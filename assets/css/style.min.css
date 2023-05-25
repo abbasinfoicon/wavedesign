@@ -1808,7 +1808,7 @@ hr {
   align-items: center;
 }
 
-.circle svg textPath {
+.circle_sec svg textPath {
   font-size: 6px;
   fill: #ffffff;
   text-transform: uppercase;
