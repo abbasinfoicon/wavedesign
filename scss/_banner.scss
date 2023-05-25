@@ -133,9 +133,11 @@
 .circle {
     svg {
         textPath {
-            font-size: 6.5px;
+            font-size: 6px;
             fill: $white;
             text-transform: uppercase;
+            @include nohemi(regular);
+            letter-spacing: 0.05rem;
         }
     }
 }

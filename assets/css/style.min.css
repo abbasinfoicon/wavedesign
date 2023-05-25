@@ -1802,9 +1802,11 @@ hr {
 }
 
 .circle svg textPath {
-  font-size: 6.5px;
+  font-size: 6px;
   fill: #ffffff;
   text-transform: uppercase;
+  font-family: "Nohemi-Regular";
+  letter-spacing: 0.05rem;
 }
 
 @keyframes rotateText {
