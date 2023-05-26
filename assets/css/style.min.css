@@ -1107,7 +1107,7 @@ hr {
   transform: translateY(-50%);
   transition: 0.5s;
 }
-.leftNewbtn:hover:before {
+.leftNewbtn.active:before {
   width: 100%;
 }
 .leftNewbtn a {

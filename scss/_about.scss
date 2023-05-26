@@ -144,7 +144,13 @@
         transition: .5s;
     }
 
-    &:hover {
+    // &:hover {
+    //     &:before {
+    //         width: 100%;
+    //     }
+    // }
+
+    &.active {
         &:before {
             width: 100%;
         }
