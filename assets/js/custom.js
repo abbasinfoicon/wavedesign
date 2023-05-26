@@ -280,6 +280,34 @@ if ($('.countVal').length) {
 }
 
 /*========================================================================================================
+================================ Form Validation ===================================================================
+===========================================================================================================*/
+$(document).ready(function () {
+    $('.form-group > *').focus();
+    $('.form-group > *').on('input', function () {
+        if ($(this).val().trim() != '')
+            $(this).parent().addClass('focused');
+        else
+            $(this).parent().removeClass('focused');
+    });
+
+    $('.form-control[required]').on('input', function () {
+        var allFilled = true;
+        $('.form-control[required]').each(function () {
+            if ($(this).val() === '') {
+                allFilled = false;
+                return false;
+            }
+        });
+        if (allFilled) {
+            $('.btn-submit').prop('disabled', false);
+        } else {
+            $('.btn-submit').prop('disabled', true);
+        }
+    });
+});
+
+/*========================================================================================================
 ================================ Text circle ===================================================================
 ===========================================================================================================*/
 if ($('.circle-roted').length) {
@@ -329,31 +357,5 @@ if ($('.grid').length) {
 }
 
 
-/*========================================================================================================
-================================ Form Validation ===================================================================
-===========================================================================================================*/
-$(document).ready(function () {
-    $('.form-group > *').focus();
-    $('.form-group > *').on('input', function () {
-        if ($(this).val().trim() != '')
-            $(this).parent().addClass('focused');
-        else
-            $(this).parent().removeClass('focused');
-    });
 
-    $('.form-control[required]').on('input', function () {
-        var allFilled = true;
-        $('.form-control[required]').each(function () {
-            if ($(this).val() === '') {
-                allFilled = false;
-                return false;
-            }
-        });
-        if (allFilled) {
-            $('.btn-submit').prop('disabled', false);
-        } else {
-            $('.btn-submit').prop('disabled', true);
-        }
-    });
-});
 
