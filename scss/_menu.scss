@@ -6,6 +6,9 @@
     @include full-width;
     text-align: center;
     margin-top: 1.25rem;
+    position: fixed;
+    bottom: 1rem;
+    z-index: 99;
 
     &.sticky {
         position: fixed;

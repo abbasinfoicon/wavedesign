@@ -206,7 +206,122 @@
             }
         }
     }
+
+    &Page {
+        &-img {
+            height: 47.063rem;
+            overflow: hidden;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 4rem;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &-sec {
+            h3 {
+                font-size: 3rem;
+                color: $white;
+                letter-spacing: 0.05rem;
+                line-height: 3rem;
+                @include nohemi(medium);
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                color: #C4C6CC;
+                letter-spacing: 0.05rem;
+                font-size: 1.125rem;
+                line-height: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .img-style {
+                border-radius: 12px;
+
+                img {}
+            }
+
+            img {
+                border-radius: 12px;
+                margin-bottom: 3.75rem;
+            }
+
+            h4 {
+                color: $white;
+                letter-spacing: 0.05rem;
+                @include nohemi(medium);
+                line-height: 3rem;
+                margin-bottom: 3.75rem;
+            }
+
+            .hilight_txt {
+                font-size: 2.25rem;
+                color: $white;
+                letter-spacing: 0.05rem;
+                @include nohemi(medium);
+                line-height: 3rem;
+                padding: 3.875rem 0;
+                border-top: 1px solid $bg;
+                border-bottom: 1px solid $bg;
+                margin-bottom: 3.75rem;
+
+                h4 {
+                    margin-bottom: 0;
+                    border-left: 11px solid $orange;
+                    padding-left: 3rem;
+                }
+            }
+        }
+    }
 }
+
+.share {
+    padding: 1.75rem 0;
+    position: relative;
+    border-top: 1px solid #2A2A2C;
+
+    p {
+        letter-spacing: 0.05rem;
+        color: $white;
+        line-height: 1rem;
+        @include nohemi(semibold);
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        li {
+            a {
+                font-size: 1.125rem;
+                width: 3.563rem;
+                height: 3.563rem;
+                background: $bg;
+                border-radius: 8px;
+                color: $active;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background-color: $orange;
+                    color: $white;
+                }
+
+                i {}
+            }
+        }
+    }
+}
+
 
 .pos-rel {
     position: relative;

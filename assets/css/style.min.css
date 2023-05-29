@@ -919,6 +919,9 @@ hr {
   position: relative;
   text-align: center;
   margin-top: 1.25rem;
+  position: fixed;
+  bottom: 1rem;
+  z-index: 99;
 }
 .mainNav.sticky {
   position: fixed;
@@ -1819,6 +1822,85 @@ hr {
   right: 0;
   bottom: 0;
 }
+.banner-blog a {
+  font-size: 0.875rem;
+  color: #8D8C98;
+  margin-bottom: 6.25rem;
+  display: block;
+}
+.banner-blog a:hover {
+  color: #ffffff;
+}
+.banner-blog a i {
+  margin-right: 12px;
+}
+.banner-blog h3 {
+  color: #ffffff;
+  letter-spacing: 0.05rem;
+  font-family: "Nohemi-Medium";
+  margin-bottom: 1.5rem;
+}
+.banner-blog p {
+  font-size: 1.5rem;
+  color: #F5F5F5;
+  letter-spacing: 0.05rem;
+  line-height: 2.25rem;
+  margin-bottom: 3.688rem;
+}
+.banner-blog .blog {
+  border-top: 1px solid #2A2A2C;
+  padding: 2rem 0;
+}
+.banner-blog .blog ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.banner-blog .blog ul li {
+  position: relative;
+  padding: 0 3.125rem;
+}
+.banner-blog .blog ul li:before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  background-image: url(../img/agency-icon.svg);
+}
+.banner-blog .blog ul li:last-child::before {
+  content: none;
+}
+.banner-blog .blog ul li h6 {
+  color: #8D8C98;
+  margin-bottom: 0;
+}
+.banner-blog .blog .user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.banner-blog .blog .user-img {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.banner-blog .blog .user-detail p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.1rem;
+  line-height: 13px;
+  color: #ffffff;
+  font-family: "Nohemi-SemiBold";
+}
+.banner-blog .blog .user-detail h6 {
+  text-transform: uppercase;
+}
+
 .crcl {
   position: absolute;
   position: absolute;
@@ -2458,7 +2540,98 @@ hr {
   background-color: #FF9838;
   border-color: #FF9838;
 }
+.blogPage-img {
+  height: 47.063rem;
+  overflow: hidden;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 4rem;
+}
+.blogPage-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.blogPage-sec h3 {
+  font-size: 3rem;
+  color: #ffffff;
+  letter-spacing: 0.05rem;
+  line-height: 3rem;
+  font-family: "Nohemi-Medium";
+  margin-bottom: 1.5rem;
+}
+.blogPage-sec p {
+  color: #C4C6CC;
+  letter-spacing: 0.05rem;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+.blogPage-sec .img-style {
+  border-radius: 12px;
+}
+.blogPage-sec img {
+  border-radius: 12px;
+  margin-bottom: 3.75rem;
+}
+.blogPage-sec h4 {
+  color: #ffffff;
+  letter-spacing: 0.05rem;
+  font-family: "Nohemi-Medium";
+  line-height: 3rem;
+  margin-bottom: 3.75rem;
+}
+.blogPage-sec .hilight_txt {
+  font-size: 2.25rem;
+  color: #ffffff;
+  letter-spacing: 0.05rem;
+  font-family: "Nohemi-Medium";
+  line-height: 3rem;
+  padding: 3.875rem 0;
+  border-top: 1px solid #242425;
+  border-bottom: 1px solid #242425;
+  margin-bottom: 3.75rem;
+}
+.blogPage-sec .hilight_txt h4 {
+  margin-bottom: 0;
+  border-left: 11px solid #FF9838;
+  padding-left: 3rem;
+}
 
+.share {
+  padding: 1.75rem 0;
+  position: relative;
+  border-top: 1px solid #2A2A2C;
+}
+.share p {
+  letter-spacing: 0.05rem;
+  color: #ffffff;
+  line-height: 1rem;
+  font-family: "Nohemi-SemiBold";
+  margin-bottom: 1rem;
+}
+.share ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.share ul li a {
+  font-size: 1.125rem;
+  width: 3.563rem;
+  height: 3.563rem;
+  background: #242425;
+  border-radius: 8px;
+  color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.share ul li a:hover {
+  background-color: #FF9838;
+  color: #ffffff;
+}
 .pos-rel {
   position: relative;
   overflow: hidden;
