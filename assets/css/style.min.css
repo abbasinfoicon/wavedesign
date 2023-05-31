@@ -2375,7 +2375,7 @@ hr {
   bottom: 0;
   left: 0;
 }
-.contactPage-sec .box img-icon {
+.contactPage-sec .box img.img-icon {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
