@@ -680,7 +680,8 @@ hr {
 .light .header,
 .light .mainNav ul,
 .light .count-box .box,
-.light .count-box .box .top span.circle:first-child {
+.light .count-box .box .top span.circle:first-child,
+.light .bordeRadius:before {
   background-color: #ffffff;
 }
 .light .mainNav ul {
@@ -700,11 +701,21 @@ hr {
 .light .mainNav ul li a,
 .light .about-content h3.color,
 .light .count-box .box4 p,
-.light .project-grid .content-style a {
+.light .project-grid .content-style a,
+.light .select-selected,
+.light .text-carousel .item p,
+.light .service-box h6,
+.light .bg_black .heading h2,
+.light .leftNewbtn a,
+.light .support-content h3,
+.light .support-inline .support-content h4 {
   color: #717171;
 }
 .light .about-content h3 {
   color: #dbdbdb;
+}
+.light .leftNewbtn.active a {
+  color: #ffffff;
 }
 .light .count-box .box:hover .bottom p,
 .light .unlock-skill.active h1,
@@ -725,6 +736,23 @@ hr {
   color: #ffffff;
   background-color: #717171;
 }
+.light .select-selected.select-arrow-active,
+.light .select-items,
+.light .header-lgTheme:before,
+.light .support-inline .support-content-img {
+  background-color: #717171;
+}
+.light .service,
+.light .support-content {
+  background-color: #d8d8d8;
+}
+.light .bg_black {
+  background-color: #F5F5F5;
+}
+.light .text-carousel {
+  background-image: url(../img/bg-slider-wh.png);
+  border-radius: 48px 48px 0 0;
+}
 .light .divider,
 .light .prgass-section .act_dot .dot {
   border-color: #717171;
@@ -732,11 +760,14 @@ hr {
 .light .slider-home .item:after {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
 }
+.light .support-img {
+  background: linear-gradient(0deg, #d8d8d8, #d8d8d8), linear-gradient(0deg, #DEE4F2, #DEE4F2);
+}
 .light .count-box .box .top span.circle:nth-child(2) {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, rgb(242, 242, 242) 41.71%, rgb(255, 255, 255) 100%);
 }
 .light .count-box .box .top span.circle:nth-child(3) {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, rgb(227, 227, 227) 50%, rgb(242, 242, 242) 100%);
 }
 
 /*=====================================================================

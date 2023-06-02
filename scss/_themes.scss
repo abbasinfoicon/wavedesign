@@ -51,7 +51,8 @@
     .header,
     .mainNav ul,
     .count-box .box,
-    .count-box .box .top span.circle:first-child {
+    .count-box .box .top span.circle:first-child,
+    .bordeRadius:before {
         background-color: $white;
     }
 
@@ -73,12 +74,23 @@
     .mainNav ul li a,
     .about-content h3.color,
     .count-box .box4 p,
-    .project-grid .content-style a {
+    .project-grid .content-style a,
+    .select-selected,
+    .text-carousel .item p,
+    .service-box h6,
+    .bg_black .heading h2,
+    .leftNewbtn a,
+    .support-content h3,
+    .support-inline .support-content h4 {
         color: $txt;
     }
 
     .about-content h3 {
         color: #dbdbdb;
+    }
+
+    .leftNewbtn.active a {
+        color: $white;
     }
 
     .count-box .box:hover .bottom p,
@@ -104,6 +116,27 @@
         }
     }
 
+    .select-selected.select-arrow-active,
+    .select-items,
+    .header-lgTheme:before,
+    .support-inline .support-content-img {
+        background-color: #717171;
+    }
+
+    .service,
+    .support-content {
+        background-color: #d8d8d8;
+    }
+
+    .bg_black {
+        background-color: $active;
+    }
+
+    .text-carousel {
+        background-image: url(../img/bg-slider-wh.png);
+        border-radius: 48px 48px 0 0;
+    }
+
     .divider,
     .prgass-section .act_dot .dot {
         border-color: $txt;
@@ -113,10 +146,16 @@
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
     }
 
-    .count-box .box .top span.circle:nth-child(2) {
-        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+    .support-img {
+        background: linear-gradient(0deg, #d8d8d8, #d8d8d8), linear-gradient(0deg, #DEE4F2, #DEE4F2);
+
     }
+
+    .count-box .box .top span.circle:nth-child(2) {
+        background: radial-gradient(50% 50% at 50% 50%, rgb(242 242 242) 41.71%, rgb(255 255 255) 100%);
+    }
+
     .count-box .box .top span.circle:nth-child(3) {
-        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
+        background: radial-gradient(50% 50% at 50% 50%, rgb(227 227 227) 50%, rgb(242, 242, 242) 100%);
     }
 }
