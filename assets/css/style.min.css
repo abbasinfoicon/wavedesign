@@ -681,7 +681,11 @@ hr {
 .light .mainNav ul,
 .light .count-box .box,
 .light .count-box .box .top span.circle:first-child,
-.light .bordeRadius:before {
+.light .bordeRadius:before,
+.light .contact-header,
+.light .contact-form .form-group,
+.light .contact-form .form-group .btn-submit.disabled,
+.light .contact-form .form-group .btn-submit[disabled] {
   background-color: #ffffff;
 }
 .light .mainNav ul {
@@ -708,13 +712,56 @@ hr {
 .light .bg_black .heading h2,
 .light .leftNewbtn a,
 .light .support-content h3,
-.light .support-inline .support-content h4 {
+.light .support-inline .support-content h4,
+.light .contact-header .heading h1,
+.light .circle_sec svg textPath,
+.light .contact-form .form-group label,
+.light .contact-form .form-group .btn-submit,
+.light .service_page-box .ser-content p,
+.light .service_page-box .ser-content h3,
+.light .meta ul li a,
+.light .filters ul li,
+.light .filter-content-item .project-name h4,
+.light .filter-content-item .project-desc p,
+.light .banner-sec h3,
+.light .blog-insight h1,
+.light .blog-insight h6,
+.light .blog-insight h5,
+.light .blog_content h3,
+.light .blog_content .user-info p,
+.light .contactPage-sec h1,
+.light .contactPage-sec .box a,
+.light .contactPage-sec .box h4,
+.light .behind-scenes h4,
+.light .behind-scenes .right-sec p,
+.light .behind-scenes .right-sec li,
+.light .behind-scenes .right-sec p a,
+.light .behind-scenes .right-sec li a,
+.light .count-box .box h3,
+.light .banner-blog h3,
+.light .banner-blog p,
+.light .banner-blog .blog .user-detail p,
+.light .blogPage-sec h3,
+.light .blogPage-sec h4,
+.light .share ul li a,
+.light .banner-agency h1,
+.light .agency-slide ul li a,
+.light .agc2-box h3 {
   color: #717171;
+}
+.light .contact-form .form-group .btn-submit img {
+  filter: invert(50%);
+}
+.light .circle_sec svg textPath {
+  fill: #717171;
 }
 .light .about-content h3 {
   color: #dbdbdb;
 }
-.light .leftNewbtn.active a {
+.light .leftNewbtn.active a,
+.light .contact-form .form-group.focused label,
+.light .filters ul li:hover,
+.light .filter-content-item:hover .project-desc a {
   color: #ffffff;
 }
 .light .count-box .box:hover .bottom p,
@@ -739,12 +786,46 @@ hr {
 .light .select-selected.select-arrow-active,
 .light .select-items,
 .light .header-lgTheme:before,
-.light .support-inline .support-content-img {
+.light .support-inline .support-content-img,
+.light .contact-form .form-group.focused,
+.light .filters ul li:hover,
+.light .blog-insight p:after,
+.light .banner-project .banner-content {
   background-color: #717171;
 }
+.light .contactPage-sec .box .line,
+.light .agency-slide .border-xy,
+.light .agency-slide {
+  border-color: #717171;
+}
 .light .service,
-.light .support-content {
+.light .support-content,
+.light .contact,
+.light .meta ul li a,
+.light .contact-header .roket-sec,
+.light .service_page-box .ser-img,
+.light .banner-service,
+.light .filters ul li,
+.light .banner-sec,
+.light .blog-insight,
+.light .blog-insight p.or span,
+.light .contactPage-sec .box,
+.light .behind .container-fluid,
+.light .banner-project .date-deliver h6,
+.light .banner-project-bg,
+.light .share ul li a,
+.light .contact-header .heading .line,
+.light .bg-blk,
+.light .agc2-box .img-style {
   background-color: #d8d8d8;
+}
+.light .service_page-box,
+.light .header.sticky,
+.light .banner-blog .blog,
+.light .share,
+.light .blogPage-sec .hilight_txt,
+.light .contactPage-sec .box-border {
+  border-color: #d8d8d8;
 }
 .light .bg_black {
   background-color: #F5F5F5;

@@ -52,7 +52,11 @@
     .mainNav ul,
     .count-box .box,
     .count-box .box .top span.circle:first-child,
-    .bordeRadius:before {
+    .bordeRadius:before,
+    .contact-header,
+    .contact-form .form-group,
+    .contact-form .form-group .btn-submit.disabled,
+    .contact-form .form-group .btn-submit[disabled] {
         background-color: $white;
     }
 
@@ -81,15 +85,60 @@
     .bg_black .heading h2,
     .leftNewbtn a,
     .support-content h3,
-    .support-inline .support-content h4 {
+    .support-inline .support-content h4,
+    .contact-header .heading h1,
+    .circle_sec svg textPath,
+    .contact-form .form-group label,
+    .contact-form .form-group .btn-submit,
+    .service_page-box .ser-content p,
+    .service_page-box .ser-content h3,
+    .meta ul li a,
+    .filters ul li,
+    .filter-content-item .project-name h4,
+    .filter-content-item .project-desc p,
+    .banner-sec h3,
+    .blog-insight h1,
+    .blog-insight h6,
+    .blog-insight h5,
+    .blog_content h3,
+    .blog_content .user-info p,
+    .contactPage-sec h1,
+    .contactPage-sec .box a,
+    .contactPage-sec .box h4,
+    .behind-scenes h4,
+    .behind-scenes .right-sec p,
+    .behind-scenes .right-sec li,
+    .behind-scenes .right-sec p a,
+    .behind-scenes .right-sec li a,
+    .count-box .box h3,
+    .banner-blog h3,
+    .banner-blog p,
+    .banner-blog .blog .user-detail p,
+    .blogPage-sec h3,
+    .blogPage-sec h4,
+    .share ul li a,
+    .banner-agency h1,
+    .agency-slide ul li a,
+    .agc2-box h3 {
         color: $txt;
+    }
+
+    .contact-form .form-group .btn-submit img {
+        filter: invert(50%);
+    }
+
+    .circle_sec svg textPath {
+        fill: $txt;
     }
 
     .about-content h3 {
         color: #dbdbdb;
     }
 
-    .leftNewbtn.active a {
+    .leftNewbtn.active a,
+    .contact-form .form-group.focused label,
+    .filters ul li:hover,
+    .filter-content-item:hover .project-desc a {
         color: $white;
     }
 
@@ -119,13 +168,49 @@
     .select-selected.select-arrow-active,
     .select-items,
     .header-lgTheme:before,
-    .support-inline .support-content-img {
+    .support-inline .support-content-img,
+    .contact-form .form-group.focused,
+    .filters ul li:hover,
+    .blog-insight p:after,
+    .banner-project .banner-content {
         background-color: #717171;
     }
 
+    .contactPage-sec .box .line,
+    .agency-slide .border-xy,
+    .agency-slide {
+        border-color: #717171;
+    }
+
     .service,
-    .support-content {
+    .support-content,
+    .contact,
+    .meta ul li a,
+    .contact-header .roket-sec,
+    .service_page-box .ser-img,
+    .banner-service,
+    .filters ul li,
+    .banner-sec,
+    .blog-insight,
+    .blog-insight p.or span,
+    .contactPage-sec .box,
+    .behind .container-fluid,
+    .banner-project .date-deliver h6,
+    .banner-project-bg,
+    .share ul li a,
+    .contact-header .heading .line,
+    .bg-blk,
+    .agc2-box .img-style {
         background-color: #d8d8d8;
+    }
+
+    .service_page-box,
+    .header.sticky,
+    .banner-blog .blog,
+    .share,
+    .blogPage-sec .hilight_txt,
+    .contactPage-sec .box-border {
+        border-color: #d8d8d8;
     }
 
     .bg_black {
