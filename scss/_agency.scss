@@ -1,30 +1,6 @@
-.banner {
-    &-agency {
-        h1 {
-            font-size: 8rem;
-            line-height: 8rem;
-            letter-spacing: 0.05rem;
-            color: $white;
-            @include nohemi(medium);
-            margin-bottom: 0;
-
-            small {
-                display: block;
-                color: $orange;
-                @include nohemi(light);
-                font-size: 80%;
-            }
-        }
-
-        h4 {
-            font-size: 2.25rem;
-            color: $txt3;
-            letter-spacing: 0.05rem;
-            line-height: 2.75rem;
-            margin-bottom: 2rem;
-        }
-    }
-}
+/*=====================================================================
+==========================   Agency scss  =========================
+========================================================================*/
 
 .cstmBorder {
     &_top {

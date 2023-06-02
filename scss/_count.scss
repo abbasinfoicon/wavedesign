@@ -104,17 +104,30 @@
                 }
             }
 
-            h2 {
+            h2,
+            h3 {
                 @include nohemi(medium);
                 letter-spacing: 0.05rem;
                 line-height: 4.5rem;
                 margin-bottom: 0;
             }
 
-            p {
+            h3 {
+                color: $active;
+            }
+
+            p,
+            h5 {
                 @include nohemi(semibold);
                 text-transform: uppercase;
                 letter-spacing: 0.1rem;
+            }
+
+            h5 {
+                color: $txt3;
+                text-transform: none;
+                @include nohemi(medium);
+                letter-spacing: 0.05rem;
             }
 
             &:hover {
@@ -235,6 +248,35 @@
             }
         }
     }
+
+    &-project {
+        .box {
+            min-height: 327px;
+
+            &1,
+            &4 {
+                &:hover {
+                    .top {
+                        img {
+                            animation-name: wobble4;
+                        }
+                    }
+                }
+            }
+
+            &2 {
+                &:hover {
+                    .top {
+                        .users {
+                            img {
+                                animation-name: wobble5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes wobble {
@@ -322,5 +364,32 @@
 
     100% {
         transform: rotate(-13.05deg);
+    }
+}
+
+@keyframes wobble4 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wobble5 {
+    0% {
+        scale: 1.1;
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1;
+        rotate: 13deg;
+    }
+
+    100% {
+        scale: 1.1;
+        rotate: -13deg;
     }
 }

@@ -1,3 +1,7 @@
+/*=====================================================================
+==========================   Service scss  =========================
+========================================================================*/
+
 .service {
     &_page {
         &-box {
@@ -5,7 +9,7 @@
             gap: 4.5rem;
             padding-bottom: 3.125rem;
             margin-bottom: 3.125rem;
-            border-bottom: 1px solid #2A2A2C;
+            border-bottom: 1px solid $border;
 
             &:last-child {
                 border-bottom: none;
@@ -74,8 +78,4 @@
 
         }
     }
-}
-
-.mt-125 {
-    margin-top: 7.813rem;
 }

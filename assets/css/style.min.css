@@ -629,6 +629,10 @@ hr {
   height: 0;
 }
 
+.mt-125 {
+  margin-top: 7.813rem;
+}
+
 /*=====================================================================
 ==========================   Theme color scss  =========================
 ========================================================================*/
@@ -735,7 +739,9 @@ hr {
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
 }
 
-/* The container must be positioned relative: */
+/*=====================================================================
+==========================   Custom-select scss  =========================
+========================================================================*/
 .lauguage {
   position: relative;
 }
@@ -1213,16 +1219,27 @@ hr {
   z-index: 1;
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
 }
-.count-box .box h2 {
+.count-box .box h2,
+.count-box .box h3 {
   font-family: "Nohemi-Medium";
   letter-spacing: 0.05rem;
   line-height: 4.5rem;
   margin-bottom: 0;
 }
-.count-box .box p {
+.count-box .box h3 {
+  color: #F5F5F5;
+}
+.count-box .box p,
+.count-box .box h5 {
   font-family: "Nohemi-SemiBold";
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+}
+.count-box .box h5 {
+  color: #8D8C98;
+  text-transform: none;
+  font-family: "Nohemi-Medium";
+  letter-spacing: 0.05rem;
 }
 .count-box .box:hover h2 {
   color: #FF9838;
@@ -1294,6 +1311,15 @@ hr {
   background: radial-gradient(50% 50% at 50% 50%, #FFD1A8 73.41%, #F9DFC3 100%), radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
   box-shadow: 0px 0px 60px #E99B53;
 }
+.count-project .box {
+  min-height: 327px;
+}
+.count-project .box1:hover .top img, .count-project .box4:hover .top img {
+  animation-name: wobble4;
+}
+.count-project .box2:hover .top .users img {
+  animation-name: wobble5;
+}
 
 @keyframes wobble {
   0% {
@@ -1361,6 +1387,28 @@ hr {
   }
   100% {
     transform: rotate(-13.05deg);
+  }
+}
+@keyframes wobble4 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes wobble5 {
+  0% {
+    scale: 1.1;
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1;
+    rotate: 13deg;
+  }
+  100% {
+    scale: 1.1;
+    rotate: -13deg;
   }
 }
 /*=====================================================================
@@ -1699,6 +1747,9 @@ hr {
   filter: grayscale(0);
 }
 
+/*=====================================================================
+==========================   Banner scss  =========================
+========================================================================*/
 :root {
   --radius: 20vmin;
   --frame-size: calc(var(--radius) / 3);
@@ -1900,6 +1951,142 @@ hr {
 .banner-blog .blog .user-detail h6 {
   text-transform: uppercase;
 }
+.banner-agency h1 {
+  font-size: 8rem;
+  line-height: 8rem;
+  letter-spacing: 0.05rem;
+  color: #ffffff;
+  font-family: "Nohemi-Medium";
+  margin-bottom: 0;
+}
+.banner-agency h1 small {
+  display: block;
+  color: #FF9838;
+  font-family: "Nohemi-Light";
+  font-size: 80%;
+}
+.banner-agency h4 {
+  font-size: 2.25rem;
+  color: #8D8C98;
+  letter-spacing: 0.05rem;
+  line-height: 2.75rem;
+  margin-bottom: 2rem;
+}
+.banner-project .banner-border-bottom {
+  border-bottom: 1px solid #2A2A2C;
+  justify-content: space-between;
+}
+.banner-project-bg {
+  background: #131313;
+  box-shadow: 0px 4px 12px 0px 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -o-border-radius: 12px;
+  padding: 1.125rem;
+  margin-bottom: 2rem;
+}
+.banner-project-bg > * {
+  padding-left: 0;
+  padding-right: 0;
+}
+.banner-project .banner-img {
+  margin-bottom: 0;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -o-border-radius: 12px;
+  overflow: hidden;
+}
+.banner-project .banner-content {
+  position: relative;
+  height: 100%;
+  margin-right: 1rem;
+  background: #242425;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -o-border-radius: 12px;
+  padding: 4.375rem;
+  display: flex;
+  align-items: center;
+}
+.banner-project .banner-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/patton-bg.svg");
+  z-index: 1;
+}
+.banner-project .banner-content .content {
+  position: relative;
+  z-index: 2;
+}
+.banner-project .banner-content h1 {
+  color: #ffffff;
+  letter-spacing: 0.05rem;
+  line-height: 6rem;
+  margin-bottom: 1.25rem;
+  font-family: "Nohemi-SemiBold";
+}
+.banner-project .banner-content .inline-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.banner-project .banner-content a.btn-custom {
+  color: #1C1C1D;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -o-border-radius: 100px;
+  background-color: #ffffff;
+  text-transform: none;
+  padding: 1.5rem;
+  font-family: "Nohemi-SemiBold";
+}
+.banner-project .banner-content a.btn-custom:hover {
+  background: #242425;
+  color: #ffffff;
+}
+.banner-project .date-deliver {
+  margin-bottom: 2.75rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.banner-project .date-deliver.flex-reverse {
+  justify-content: flex-end;
+}
+.banner-project .date-deliver p,
+.banner-project .date-deliver h6 {
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0;
+  font-family: "Nohemi-Medium";
+}
+.banner-project .date-deliver p img,
+.banner-project .date-deliver h6 img {
+  width: 19px;
+  height: auto;
+  margin-right: 8.5px;
+}
+.banner-project .date-deliver h6 {
+  background: #242425;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+}
 
 .crcl {
   position: absolute;
@@ -1954,6 +2141,9 @@ hr {
     transform: translateX(-50%) rotate(0deg);
   }
 }
+/*=====================================================================
+==========================   Filter scss  =========================
+========================================================================*/
 .filters {
   display: flex;
   align-items: center;
@@ -2127,6 +2317,9 @@ hr {
   margin-top: 5rem;
 }
 
+/*=====================================================================
+==========================   Contact scss  =========================
+========================================================================*/
 .contact {
   background: #111112;
   border-radius: 32px 32px 0px 0px;
@@ -2448,6 +2641,9 @@ hr {
     transform: translate(-50%, -50%) rotate(240deg);
   }
 }
+/*=====================================================================
+==========================   Blog scss  =========================
+========================================================================*/
 .blog_img {
   width: 24.688rem;
   height: 24.688rem;
@@ -2879,28 +3075,9 @@ hr {
 .support-send button:hover {
   background-color: #1C1C1D;
 }
-.banner-agency h1 {
-  font-size: 8rem;
-  line-height: 8rem;
-  letter-spacing: 0.05rem;
-  color: #ffffff;
-  font-family: "Nohemi-Medium";
-  margin-bottom: 0;
-}
-.banner-agency h1 small {
-  display: block;
-  color: #FF9838;
-  font-family: "Nohemi-Light";
-  font-size: 80%;
-}
-.banner-agency h4 {
-  font-size: 2.25rem;
-  color: #8D8C98;
-  letter-spacing: 0.05rem;
-  line-height: 2.75rem;
-  margin-bottom: 2rem;
-}
-
+/*=====================================================================
+==========================   Agency scss  =========================
+========================================================================*/
 .cstmBorder_top {
   border-radius: 40px 40px 0 0;
   padding-top: 6.375rem;
@@ -3069,6 +3246,9 @@ hr {
     opacity: 1;
   }
 }
+/*=====================================================================
+==========================   Service scss  =========================
+========================================================================*/
 .service_page-box {
   display: flex;
   gap: 4.5rem;
@@ -3128,6 +3308,116 @@ hr {
   height: 20px;
 }
 
-.mt-125 {
-  margin-top: 7.813rem;
+/*=====================================================================
+==========================   Work-project scss  =========================
+========================================================================*/
+.work .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.work .form-group {
+  margin-top: 4.375rem;
+}
+.work-sec {
+  margin-bottom: 1.25rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.work-sec.col-lg-7, .work-sec.col-lg-5 {
+  max-height: 46.375rem;
+}
+.work-sec.col-lg-4 {
+  max-height: 33.813rem;
+}
+.work-sec-box {
+  height: 100%;
+}
+.work-sec a {
+  display: block;
+  height: 100%;
+}
+.work-sec a img {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -o-border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.behind .container-fluid {
+  background: #111112;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -o-border-radius: 32px;
+  padding: 5.5rem;
+}
+@media (min-width: 1799px) {
+  .behind .container-fluid {
+    max-width: 1790px;
+  }
+}
+.behind-scenes {
+  position: relative;
+  border-bottom: 1px solid #2A2A2C;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.behind-scenes:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.behind-scenes h6 {
+  color: #FF9838;
+  margin-bottom: 0.813rem;
+  letter-spacing: 0.05em;
+  line-height: 3rem;
+}
+.behind-scenes h4 {
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  line-height: 2.25rem;
+  margin-bottom: 4.375rem;
+}
+.behind-scenes a.roted-icon i {
+  rotate: -45deg;
+}
+.behind-scenes p,
+.behind-scenes li {
+  line-height: 1.75rem;
+  letter-spacing: 0.05rem;
+}
+.behind-scenes.behind-right {
+  display: flex;
+}
+.behind-scenes .left-sec {
+  min-width: 180px;
+}
+.behind-scenes .left-sec p {
+  color: #8D8C98;
+}
+.behind-scenes .right-sec p,
+.behind-scenes .right-sec li {
+  color: #F5F5F5;
+}
+.behind-scenes .right-sec p a,
+.behind-scenes .right-sec li a {
+  color: #F5F5F5;
+  text-decoration: underline;
+}
+.behind-scenes .right-sec p a:hover,
+.behind-scenes .right-sec li a:hover {
+  color: #FF9838;
+}
+.behind-scenes .right-sec ul {
+  padding-left: 1rem;
+}
+.behind-scenes .right-sec ul li {
+  list-style: square;
 }/*# sourceMappingURL=style.min.css.map */

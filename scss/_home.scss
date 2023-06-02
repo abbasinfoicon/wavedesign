@@ -140,7 +140,11 @@ hr {
 
 .divider {
   @include full-width;
-  border: 1px solid #2A2A2C;
+  border: 1px solid $border;
   border-radius: 4px;
   height: 0;
+}
+
+.mt-125 {
+  margin-top: 7.813rem;
 }

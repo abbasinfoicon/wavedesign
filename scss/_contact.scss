@@ -1,3 +1,7 @@
+/*=====================================================================
+==========================   Contact scss  =========================
+========================================================================*/
+
 .contact {
     background: $footerBg;
     border-radius: 32px 32px 0px 0px;
@@ -32,7 +36,7 @@
 
             .line {
                 max-width: 1049px;
-                background-color: #2A2A2C;
+                background-color: $border;
                 border-radius: 4px;
                 height: 1px;
             }
@@ -50,7 +54,7 @@
                 width: 152px;
                 height: 152px;
                 margin: 0 auto;
-                background-color: #2A2A2C;
+                background-color: $border;
                 border-radius: 100%;
                 display: flex;
                 align-items: center;

@@ -1,0 +1,141 @@
+/*=====================================================================
+==========================   Work-project scss  =========================
+========================================================================*/
+
+.work {
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .form-group {
+        margin-top: 4.375rem;
+    }
+
+    &-sec {
+        margin-bottom: 1.25rem;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &.col-lg {
+
+            &-7,
+            &-5 {
+                max-height: 46.375rem;
+            }
+
+            &-4 {
+                max-height: 33.813rem;
+            }
+        }
+
+        &-box {
+            height: 100%;
+        }
+
+        a {
+            display: block;
+            height: 100%;
+
+            img {
+                @include border-radius(12px);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.behind {
+
+    .container-fluid {
+        background: $footerBg;
+        @include border-radius(32px);
+        padding: 5.5rem;
+
+        @media (min-width: 1799px) {
+            max-width: 1790px;
+        }
+    }
+
+    &-scenes {
+        position: relative;
+        border-bottom: 1px solid $border;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        h6 {
+            color: $orange;
+            margin-bottom: 0.813rem;
+            letter-spacing: 0.05em;
+            line-height: 3rem;
+        }
+
+        h4 {
+            color: $white;
+            letter-spacing: 0.05em;
+            line-height: 2.25rem;
+
+            margin-bottom: 4.375rem;
+        }
+
+        a {
+
+            &.roted-icon {
+                i {
+                    rotate: -45deg;
+                }
+            }
+        }
+
+        p,
+        li {
+            line-height: 1.75rem;
+            letter-spacing: 0.05rem;
+        }
+
+        &.behind-right {
+            display: flex;
+        }
+
+        .left-sec {
+            min-width: 180px;
+
+            p {
+                color: $txt3;
+            }
+        }
+
+        .right-sec {
+
+            p,
+            li {
+                color: $active;
+
+                a {
+                    color: $active;
+                    text-decoration: underline;
+        
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+
+            ul {
+                padding-left: 1rem;
+
+                li {
+                    list-style: square;
+                }
+            }
+        }
+    }
+}

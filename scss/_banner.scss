@@ -1,3 +1,7 @@
+/*=====================================================================
+==========================   Banner scss  =========================
+========================================================================*/
+
 :root {
     --radius: 20vmin;
     --frame-size: calc(var(--radius) / 3);
@@ -178,7 +182,7 @@
         }
 
         .blog {
-            border-top: 1px solid #2A2A2C;
+            border-top: 1px solid $border;
             padding: 2rem 0;
 
             ul {
@@ -243,6 +247,149 @@
                         text-transform: uppercase;
                     }
                 }
+            }
+        }
+    }
+
+    &-agency {
+        h1 {
+            font-size: 8rem;
+            line-height: 8rem;
+            letter-spacing: 0.05rem;
+            color: $white;
+            @include nohemi(medium);
+            margin-bottom: 0;
+
+            small {
+                display: block;
+                color: $orange;
+                @include nohemi(light);
+                font-size: 80%;
+            }
+        }
+
+        h4 {
+            font-size: 2.25rem;
+            color: $txt3;
+            letter-spacing: 0.05rem;
+            line-height: 2.75rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-project {
+        .banner-border-bottom {
+            border-bottom: 1px solid $border;
+            justify-content: space-between;
+        }
+
+        &-bg {
+            background: $bg2;
+            box-shadow: 0px 4px 12px $boxshadow;
+            @include border-radius(12px);
+            padding: 1.125rem;
+            margin-bottom: 2rem;
+
+            &>* {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        .banner {
+            &-img {
+                margin-bottom: 0;
+                @include border-radius(12px);
+                overflow: hidden;
+            }
+
+            &-content {
+                position: relative;
+                height: 100%;
+                margin-right: 1rem;
+                background: $bg;
+                @include border-radius(12px);
+                padding: 4.375rem;
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-image: url('../img/patton-bg.svg');
+                    z-index: 1;
+                }
+
+                .content {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                h1 {
+                    color: $white;
+                    letter-spacing: 0.05rem;
+                    line-height: 6rem;
+                    margin-bottom: 1.25rem;
+                    @include nohemi(semibold);
+                }
+
+                .inline-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                a {
+                    &.btn-custom {
+                        color: $blk;
+                        @include border-radius(100px);
+                        background-color: $white;
+                        text-transform: none;
+                        padding: 1.5rem;
+                        @include nohemi(semibold);
+
+                        &:hover {
+                            background: $bg;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .date-deliver {
+            margin-bottom: 2.75rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            &.flex-reverse {
+                justify-content: flex-end;
+            }
+
+            p,
+            h6 {
+                font-size: 0.75rem;
+                letter-spacing: 0.05rem;
+                margin-bottom: 0;
+                @include nohemi(medium);
+
+
+                img {
+                    width: 19px;
+                    height: auto;
+                    margin-right: 8.5px;
+                }
+            }
+
+            h6 {
+                background: $bg;
+                @include border-radius(8px);
+                padding: 0.875rem 1.5rem;
             }
         }
     }
