@@ -222,6 +222,10 @@
         border-radius: 48px 48px 0 0;
     }
 
+    .banner-project .banner-content::before {
+        background-image: url(../img/patton-bg-wh.svg);
+    }
+
     .divider,
     .prgass-section .act_dot .dot {
         border-color: $txt;

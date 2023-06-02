@@ -834,6 +834,9 @@ hr {
   background-image: url(../img/bg-slider-wh.png);
   border-radius: 48px 48px 0 0;
 }
+.light .banner-project .banner-content::before {
+  background-image: url(../img/patton-bg-wh.svg);
+}
 .light .divider,
 .light .prgass-section .act_dot .dot {
   border-color: #717171;
