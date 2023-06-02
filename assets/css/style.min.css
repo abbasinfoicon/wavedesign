@@ -836,6 +836,7 @@ hr {
 }
 .light .banner-project .banner-content::before {
   background-image: url(../img/patton-bg-wh.svg);
+  opacity: 0.15;
 }
 .light .divider,
 .light .prgass-section .act_dot .dot {
