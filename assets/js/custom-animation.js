@@ -8,7 +8,7 @@ $(function () {
 
   var animations = [
     { selector: ".agencyPra-box1", y: -180 },
-    { selector: ".agencyPra-box2", y: -600 },
+    { selector: ".agencyPra-box2", y: -572 },
     { selector: ".agencyPra-box3", y: -180 }
   ];
 
