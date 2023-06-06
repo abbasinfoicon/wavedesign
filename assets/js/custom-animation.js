@@ -20,7 +20,7 @@ $(function () {
         triggerElement: this,
         triggerHook: 0.5,
         duration: "100%"
-      }).setTween(tween).addTo(controller).addIndicators();
+      }).setTween(tween).addTo(controller);
     });
   });
 });
