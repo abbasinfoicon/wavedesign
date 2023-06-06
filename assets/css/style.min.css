@@ -3254,6 +3254,10 @@ hr {
 .agency-slide ul li:first-child a {
   padding-left: 0;
 }
+.agencyPra {
+  overflow: hidden;
+  max-height: 1000px;
+}
 .agencyPra .row {
   margin-left: -7px;
   margin-right: -7px;
@@ -3261,12 +3265,16 @@ hr {
 .agencyPra .row_custom .col-lg-4 {
   padding-left: 7px;
   padding-right: 7px;
+  transition: all 0.5s;
 }
 .agencyPra .row_custom .col-lg-4:nth-child(2) {
   position: relative;
 }
 .agencyPra .row_custom .col-lg-4:nth-child(2) .agencyPra-box .img-style:first-child, .agencyPra .row_custom .col-lg-4:nth-child(2) .agencyPra-box .img-style:last-child {
   height: 187.5px;
+}
+.agencyPra-box {
+  position: relative;
 }
 .agencyPra-box .img-style {
   height: 383px;
