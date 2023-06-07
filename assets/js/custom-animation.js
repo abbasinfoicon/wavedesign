@@ -44,6 +44,16 @@ $(function () {
       .addTo(controller); // Optional: .addIndicators() Adds indicators for debugging purposes
   });
 
+  $(".work-sec").each(function () {
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 1,
+      duration: '80%'
+    })
+      .setTween($(this).find('.work-sec-box'), { width: '100%', ease: Linear.easeNone })
+      .addTo(controller); // Optional: .addIndicators() Adds indicators for debugging purposes
+  });
+
 
 });
 

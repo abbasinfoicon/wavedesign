@@ -3455,6 +3455,7 @@ hr {
 }
 .work-sec-box {
   height: 100%;
+  margin: 0 auto;
 }
 .work-sec a {
   display: block;
