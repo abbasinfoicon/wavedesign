@@ -194,8 +194,7 @@ if ($('.aboutService').length) {
         let aboutHeight = aboutElement.outerHeight();
         let h3Color = aboutOffset - (aboutHeight * 0.8);
 
-        console.log("aboutElement", aboutElement)
-        console.log("aboutOffset", aboutOffset)
+
 
         if (scroll > h3Color) {
             $('.aboutService .about-content h3').each(function (i) {
@@ -314,7 +313,7 @@ if ($('.circle-roted').length) {
     // const circleType = new CircleType(document.getElementById('showreel')).radius(110);
 
     const text = document.querySelector(".text p");
-    console.log("circle text",text); // Check if the variable is null or contains the expected element
+
     if (text) {
         text.innerHTML = text.innerText.split("").map((char, i) => `<span style="transform:rotate(${i * 5.8}deg)">${char}</span>`).join("");
     }

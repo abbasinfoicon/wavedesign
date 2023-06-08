@@ -175,7 +175,6 @@
         border-color: #717171;
     }
 
-    .service,
     .support-content,
     .contact,
     .meta ul li a,
@@ -265,7 +264,8 @@
     }
 
     .support-content ul.design-layout li a,
-    .support-inline .support-content-img {
+    .support-inline .support-content-img,
+    .service {
         background-color: $active;
     }
 
@@ -294,5 +294,15 @@
 
     .meta {
         margin-bottom: 0;
+    }
+
+    .service {
+        &-box {
+            display: none;
+
+            &.blkImg {
+                display: flex;
+            }
+        }
     }
 }

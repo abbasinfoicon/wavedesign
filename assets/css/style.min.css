@@ -790,7 +790,6 @@ hr {
 .light .agency-slide {
   border-color: #717171;
 }
-.light .service,
 .light .support-content,
 .light .contact,
 .light .meta ul li a,
@@ -863,7 +862,8 @@ hr {
   background-color: transparent;
 }
 .light .support-content ul.design-layout li a,
-.light .support-inline .support-content-img {
+.light .support-inline .support-content-img,
+.light .service {
   background-color: #F5F5F5;
 }
 .light .support-wave span:first-child {
@@ -886,6 +886,12 @@ hr {
 }
 .light .meta {
   margin-bottom: 0;
+}
+.light .service-box {
+  display: none;
+}
+.light .service-box.blkImg {
+  display: flex;
 }
 
 /*=====================================================================
@@ -1187,39 +1193,6 @@ hr {
   position: absolute;
   bottom: -40px;
   left: 0;
-}
-
-.service {
-  text-align: center;
-  background: #242425;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
-  border-radius: 40px;
-  height: 20.375rem;
-  margin: 4rem 0;
-}
-.service-box {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  height: 100%;
-  justify-content: center;
-  cursor: pointer;
-}
-.service-box .img-style {
-  width: 116px;
-  height: 116px;
-  margin: 0 auto;
-}
-.service-box .img-style img {
-  transition: 0.5s;
-}
-.service-box h6 {
-  color: #ffffff;
-  font-family: "Nohemi-Medium";
-  text-transform: uppercase;
-}
-.service-box:hover .img-style img {
-  scale: 1.1;
 }
 
 .aboutService .container-fluid {
@@ -3446,6 +3419,41 @@ hr {
 /*=====================================================================
 ==========================   Service scss  =========================
 ========================================================================*/
+.service {
+  text-align: center;
+  background: #242425;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  height: 20.375rem;
+  margin: 4rem 0;
+}
+.service-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  height: 100%;
+  justify-content: center;
+  cursor: pointer;
+}
+.service-box.blkImg {
+  display: none;
+}
+.service-box .img-style {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto;
+}
+.service-box .img-style img {
+  transition: 0.5s;
+}
+.service-box h6 {
+  color: #ffffff;
+  font-family: "Nohemi-Medium";
+  text-transform: uppercase;
+}
+.service-box:hover .img-style img {
+  scale: 1.1;
+}
 .service_page-box {
   display: flex;
   gap: 4.5rem;
