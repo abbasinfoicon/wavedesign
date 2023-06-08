@@ -44,19 +44,23 @@
 
 
 .light {
-    background-color: $white;
+    background-color: $light;
 
     .header-lgTheme .lauguage select,
-    .footer,
     .header,
-    .mainNav ul,
-    .count-box .box,
     .count-box .box .top span.circle:first-child,
     .bordeRadius:before,
     .contact-header,
     .contact-form .form-group,
     .contact-form .form-group .btn-submit.disabled,
     .contact-form .form-group .btn-submit[disabled] {
+        background-color: $light;
+    }
+
+    .count-box .box,
+    .mainNav ul,
+    .footer,
+    .bg_black {
         background-color: $white;
     }
 
@@ -73,8 +77,6 @@
     .heading h4,
     .heading h3,
     .footer-logo h6,
-    .slider-home .item-content p,
-    .slider-home .item-content h2,
     .mainNav ul li a,
     .about-content h3.color,
     .count-box .box4 p,
@@ -120,7 +122,7 @@
     .banner-agency h1,
     .agency-slide ul li a,
     .agc2-box h3 {
-        color: $txt;
+        color: $txt2;
     }
 
     .contact-form .form-group .btn-submit img {
@@ -128,7 +130,7 @@
     }
 
     .circle_sec svg textPath {
-        fill: $txt;
+        fill: $txt2;
     }
 
     .about-content h3 {
@@ -154,16 +156,7 @@
         background-color: $bg;
     }
 
-    .btn-custom {
-        color: $txt;
-        background-color: transparent;
-        border-color: $txt;
 
-        &:hover {
-            color: $white;
-            background-color: $txt;
-        }
-    }
 
     .select-selected.select-arrow-active,
     .select-items,
@@ -201,7 +194,7 @@
     .contact-header .heading .line,
     .bg-blk,
     .agc2-box .img-style {
-        background-color: #d8d8d8;
+        background-color: $white;
     }
 
     .service_page-box,
@@ -211,10 +204,6 @@
     .blogPage-sec .hilight_txt,
     .contactPage-sec .box-border {
         border-color: #d8d8d8;
-    }
-
-    .bg_black {
-        background-color: $active;
     }
 
     .text-carousel {
@@ -229,23 +218,81 @@
 
     .divider,
     .prgass-section .act_dot .dot {
-        border-color: $txt;
+        border-color: $txt2;
     }
 
-    .slider-home .item:after {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
-    }
 
     .support-img {
-        background: linear-gradient(0deg, #d8d8d8, #d8d8d8), linear-gradient(0deg, #DEE4F2, #DEE4F2);
-
+        background-image: linear-gradient(0deg, #DEE4F2, #DEE4F2);
     }
 
     .count-box .box .top span.circle:nth-child(2) {
-        background: radial-gradient(50% 50% at 50% 50%, rgb(242 242 242) 41.71%, rgb(255 255 255) 100%);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 41.71%, rgba(0, 0, 0, 0.05) 100%);
     }
 
     .count-box .box .top span.circle:nth-child(3) {
-        background: radial-gradient(50% 50% at 50% 50%, rgb(227 227 227) 50%, rgb(242, 242, 242) 100%);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 61.98%, rgba(0, 0, 0, 0.04) 100%);
+    }
+}
+
+.light {
+
+    .btn-custom,
+    .about-content .btn-custom:hover {
+        background-color: $border;
+    }
+
+    .about-content .btn-custom,
+    .support-img .btn-custom:hover,
+    .btn-custom:hover {
+        background-color: $orange;
+    }
+
+    .btn-custom {
+        color: $white;
+    }
+
+    .btn-custom {
+        border-color: $light;
+    }
+
+    .support-img .btn-custom {
+        background-color: $blk;
+    }
+
+    .slider-home .item-content a {
+        background-color: transparent;
+    }
+
+    .support-content ul.design-layout li a,
+    .support-inline .support-content-img {
+        background-color: $active;
+    }
+
+    .support-wave span:first-child {
+        background-color: #D7DAE6;
+    }
+
+    .support-wave span:nth-child(2) {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 41.71%, rgba(0, 0, 0, 0.05) 100%);
+    }
+
+    .support-wave span:nth-child(3) {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 61.98%, rgba(0, 0, 0, 0.04) 100%);
+    }
+
+    .support-wave span:nth-child(4) {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 0.02) 100%);
+    }
+
+    .project-grid {
+        background: $white;
+        box-shadow: 0px 2px 12px rgba(17, 17, 32, 0.08);
+        border-radius: 1.25rem;
+        padding: 12px;
+    }
+
+    .meta {
+        margin-bottom: 0;
     }
 }

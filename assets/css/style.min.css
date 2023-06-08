@@ -673,19 +673,22 @@ hr {
 }
 
 .light {
-  background-color: #ffffff;
+  background-color: #E6E3E3;
 }
 .light .header-lgTheme .lauguage select,
-.light .footer,
 .light .header,
-.light .mainNav ul,
-.light .count-box .box,
 .light .count-box .box .top span.circle:first-child,
 .light .bordeRadius:before,
 .light .contact-header,
 .light .contact-form .form-group,
 .light .contact-form .form-group .btn-submit.disabled,
 .light .contact-form .form-group .btn-submit[disabled] {
+  background-color: #E6E3E3;
+}
+.light .count-box .box,
+.light .mainNav ul,
+.light .footer,
+.light .bg_black {
   background-color: #ffffff;
 }
 .light .mainNav ul {
@@ -700,8 +703,6 @@ hr {
 .light .heading h4,
 .light .heading h3,
 .light .footer-logo h6,
-.light .slider-home .item-content p,
-.light .slider-home .item-content h2,
 .light .mainNav ul li a,
 .light .about-content h3.color,
 .light .count-box .box4 p,
@@ -747,13 +748,13 @@ hr {
 .light .banner-agency h1,
 .light .agency-slide ul li a,
 .light .agc2-box h3 {
-  color: #717171;
+  color: #48484E;
 }
 .light .contact-form .form-group .btn-submit img {
   filter: invert(50%);
 }
 .light .circle_sec svg textPath {
-  fill: #717171;
+  fill: #48484E;
 }
 .light .about-content h3 {
   color: #dbdbdb;
@@ -773,15 +774,6 @@ hr {
 .light .prgass-section.active::before {
   color: #ffffff;
   background-color: #242425;
-}
-.light .btn-custom {
-  color: #717171;
-  background-color: transparent;
-  border-color: #717171;
-}
-.light .btn-custom:hover {
-  color: #ffffff;
-  background-color: #717171;
 }
 .light .select-selected.select-arrow-active,
 .light .select-items,
@@ -817,7 +809,7 @@ hr {
 .light .contact-header .heading .line,
 .light .bg-blk,
 .light .agc2-box .img-style {
-  background-color: #d8d8d8;
+  background-color: #ffffff;
 }
 .light .service_page-box,
 .light .header.sticky,
@@ -826,9 +818,6 @@ hr {
 .light .blogPage-sec .hilight_txt,
 .light .contactPage-sec .box-border {
   border-color: #d8d8d8;
-}
-.light .bg_black {
-  background-color: #F5F5F5;
 }
 .light .text-carousel {
   background-image: url(../img/bg-slider-wh.png);
@@ -840,19 +829,63 @@ hr {
 }
 .light .divider,
 .light .prgass-section .act_dot .dot {
-  border-color: #717171;
-}
-.light .slider-home .item:after {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  border-color: #48484E;
 }
 .light .support-img {
-  background: linear-gradient(0deg, #d8d8d8, #d8d8d8), linear-gradient(0deg, #DEE4F2, #DEE4F2);
+  background-image: linear-gradient(0deg, #DEE4F2, #DEE4F2);
 }
 .light .count-box .box .top span.circle:nth-child(2) {
-  background: radial-gradient(50% 50% at 50% 50%, rgb(242, 242, 242) 41.71%, rgb(255, 255, 255) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 41.71%, rgba(0, 0, 0, 0.05) 100%);
 }
 .light .count-box .box .top span.circle:nth-child(3) {
-  background: radial-gradient(50% 50% at 50% 50%, rgb(227, 227, 227) 50%, rgb(242, 242, 242) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 61.98%, rgba(0, 0, 0, 0.04) 100%);
+}
+
+.light .btn-custom,
+.light .about-content .btn-custom:hover {
+  background-color: #2A2A2C;
+}
+.light .about-content .btn-custom,
+.light .support-img .btn-custom:hover,
+.light .btn-custom:hover {
+  background-color: #FF9838;
+}
+.light .btn-custom {
+  color: #ffffff;
+}
+.light .btn-custom {
+  border-color: #E6E3E3;
+}
+.light .support-img .btn-custom {
+  background-color: #1C1C1D;
+}
+.light .slider-home .item-content a {
+  background-color: transparent;
+}
+.light .support-content ul.design-layout li a,
+.light .support-inline .support-content-img {
+  background-color: #F5F5F5;
+}
+.light .support-wave span:first-child {
+  background-color: #D7DAE6;
+}
+.light .support-wave span:nth-child(2) {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 41.71%, rgba(0, 0, 0, 0.05) 100%);
+}
+.light .support-wave span:nth-child(3) {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 61.98%, rgba(0, 0, 0, 0.04) 100%);
+}
+.light .support-wave span:nth-child(4) {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 0.02) 100%);
+}
+.light .project-grid {
+  background: #ffffff;
+  box-shadow: 0px 2px 12px rgba(17, 17, 32, 0.08);
+  border-radius: 1.25rem;
+  padding: 12px;
+}
+.light .meta {
+  margin-bottom: 0;
 }
 
 /*=====================================================================
@@ -3085,6 +3118,8 @@ hr {
   border-radius: 1.25rem;
   padding: 6.875rem;
   margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 .support-content h3 {
   font-size: 3rem;
@@ -3191,6 +3226,44 @@ hr {
 .support-send button:hover {
   background-color: #1C1C1D;
 }
+.support-wave {
+  position: absolute;
+  right: 5%;
+  top: 9%;
+}
+.support-wave span {
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.support-wave span:first-child {
+  width: 1.7rem;
+  height: 1.7rem;
+  background: #48484E;
+}
+.support-wave span:nth-child(2) {
+  width: 11.9rem;
+  height: 11.9rem;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+}
+.support-wave span:nth-child(3) {
+  width: 20.196rem;
+  height: 20.196rem;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 61.98%, rgba(255, 255, 255, 0.04) 100%);
+}
+.support-wave span:nth-child(4) {
+  width: 29.125rem;
+  height: 29.125rem;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
+}
+
 /*=====================================================================
 ==========================   Agency scss  =========================
 ========================================================================*/

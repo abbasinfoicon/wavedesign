@@ -24,6 +24,8 @@
         border-radius: 1.25rem;
         padding: 6.875rem;
         margin-bottom: 1rem;
+        position: relative;
+        overflow: hidden;
 
         h3 {
             font-size: 3rem;
@@ -61,6 +63,7 @@
                             bottom: -45px;
                         }
                     }
+
                     &:nth-child(even) {
                         img {
                             top: -45px;
@@ -154,6 +157,45 @@
             img {}
 
             span {}
+        }
+    }
+
+    &-wave {
+        position: absolute;
+        right: 5%;
+        top: 9%;
+
+        span {
+            @include border-radius(100%);
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &:first-child {
+                width: 1.7rem;
+                height: 1.7rem;
+                background: $txt2;
+            }
+
+            &:nth-child(2) {
+                width: 11.9rem;
+                height: 11.9rem;
+                background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 41.71%, rgba(255, 255, 255, 0.05) 100%);
+            }
+
+            &:nth-child(3) {
+                width: 20.196rem;
+                height: 20.196rem;
+                background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 61.98%, rgba(255, 255, 255, 0.04) 100%);
+            }
+
+            &:nth-child(4) {
+                width: 29.125rem;
+                height: 29.125rem;
+                background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 62.5%, rgba(255, 255, 255, 0.02) 100%);
+            }
         }
     }
 }
