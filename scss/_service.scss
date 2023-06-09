@@ -9,6 +9,10 @@
     height: 20.375rem;
     margin: 4rem 0;
 
+    @media (max-width: 991px) {
+        margin: 1rem 0;
+    }
+
     &-box {
         display: flex;
         flex-direction: column;

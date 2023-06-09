@@ -95,6 +95,11 @@ hr {
     background-color: $blk;
   }
 }
+.row-margin {
+  @media (max-width: 991px) {
+    margin: 3rem 0;
+  }
+}
 
 .container-fluid,
 .container,

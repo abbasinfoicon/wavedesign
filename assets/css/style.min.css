@@ -563,6 +563,12 @@ hr {
   background-color: #1C1C1D;
 }
 
+@media (max-width: 991px) {
+  .row-margin {
+    margin: 3rem 0;
+  }
+}
+
 @media (min-width: 576px) {
   .container-fluid,
   .container,
@@ -3426,6 +3432,11 @@ hr {
   border-radius: 40px;
   height: 20.375rem;
   margin: 4rem 0;
+}
+@media (max-width: 991px) {
+  .service {
+    margin: 1rem 0;
+  }
 }
 .service-box {
   display: flex;
