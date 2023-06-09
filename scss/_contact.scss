@@ -23,10 +23,15 @@
             flex-direction: column;
         }
 
+        @media (max-width: 767px) {
+            padding: 3rem;
+        }
+
         .heading {
             margin-bottom: 0;
 
-            h1 {
+            h1,
+            .h1 {
                 color: $white;
                 letter-spacing: 0.05rem;
                 margin-bottom: 4rem;
@@ -269,7 +274,8 @@
         &-sec {
             position: relative;
 
-            h1 {
+            h1,
+            .h1 {
                 font-size: 8rem;
                 color: $white;
                 letter-spacing: 0.05rem;

@@ -11,12 +11,21 @@ footer {
 section,
 .divider {
   margin-bottom: 6.25rem;
+
+  @media (max-width: 767px) {
+    margin-bottom: 5rem;
+  }
+
+  @media (max-width: 575px) {
+    margin-bottom: 4rem;
+  }
 }
 
 .heading {
   margin-bottom: 4.063rem;
 
-  h1 {
+  h1,
+  .h1 {
     span {
       color: $orange;
     }
@@ -50,6 +59,12 @@ section,
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
   }
 }
 
@@ -87,14 +102,25 @@ hr {
   &:before {
     content: "";
     position: absolute;
-    height: 81px;
+    height: 5.063rem;
     bottom: -7.5rem;
     border-radius: 30px;
     width: 100%;
     z-index: 9999;
     background-color: $blk;
+
+    @media (max-width: 767px) {
+      bottom: -6.5rem;
+      height: 3rem;
+    }
+  
+    @media (max-width: 575px) {
+      margin-bottom: 4rem;
+
+    }    
   }
 }
+
 .row-margin {
   @media (max-width: 991px) {
     margin: 3rem 0;
@@ -152,4 +178,8 @@ hr {
 
 .mt-125 {
   margin-top: 7.813rem;
+
+  @media (max-width: 767px) {
+    margin-top: 5rem;
+  }
 }

@@ -111,6 +111,16 @@
         overflow: hidden;
         min-height: 47.875rem;
 
+        @media (max-width: 767px) {
+            min-height: 44rem;
+            padding: 10rem 2rem;
+        }
+
+        @media (max-width: 440px) {
+            min-height: 37rem;
+            padding: 8rem 2rem;
+        }
+
         p {
             color: $txt3;
             letter-spacing: 0.2rem;
@@ -135,6 +145,10 @@
             transform: translateX(-50%);
             bottom: -36%;
             animation: rotateImg 18s linear infinite;
+
+            @media (max-width: 767px) {
+                bottom: -23%;
+            }
 
             .bg {
                 background: rgba(255, 152, 56, 0.2);

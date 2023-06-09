@@ -42,6 +42,10 @@
                 border-radius: 6px;
                 font-family: "Nohemi-Medium";
 
+                @media (max-width: 500px) {
+                    padding: 9.5px;
+                }
+
                 &:hover {
                     color: $white;
                     background-color: #48484E;

@@ -6,9 +6,18 @@
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(0deg, #DEE4F2, #DEE4F2);
         border-radius: 20px;
         position: relative;
+        height: 100%;
 
         img {
             scale: 0.7;
+            @include img-center(both);
+            transform-origin: left top;
+
+            @media (max-width: 991px) {
+                position: static;
+                transform-origin: center;
+                transform: none;
+            }
         }
 
         .btn-custom {
@@ -26,6 +35,14 @@
         margin-bottom: 1rem;
         position: relative;
         overflow: hidden;
+
+        @media (max-width: 1440px) {
+            padding: 6.875rem 2.45rem;
+        }
+
+        @media (max-width: 991px) {
+            margin-top: 2rem;
+        }
 
         h3 {
             font-size: 3rem;
@@ -50,6 +67,11 @@
                 justify-content: space-between;
                 min-height: 45px;
 
+                @media (max-width: 575px) {
+                    flex-direction: column;
+                    min-height: auto;
+                }
+
                 img {
                     position: absolute;
                     right: -60px;
@@ -58,15 +80,34 @@
                 li {
                     position: relative;
 
+                    @media (max-width: 575px) {
+                        display: flex;
+                        margin-bottom: 15px;
+                    }
+
                     &:nth-child(odd) {
                         img {
                             bottom: -45px;
+
+                            @media (max-width: 575px) {
+                                bottom: -15px;
+                                rotate: 90deg;
+                                width: 60px;
+                                left: -52px;
+                            }
                         }
                     }
 
                     &:nth-child(even) {
                         img {
                             top: -45px;
+
+                            @media (max-width: 575px) {
+                                top: 45px;
+                                rotate: 90deg;
+                                width: 60px;
+                                right: -52px;
+                            }
                         }
                     }
 
@@ -77,6 +118,11 @@
                         padding: 0.938rem 1.875rem;
                         border-radius: 1000px;
                         transition: .5s;
+
+                        @media (max-width: 575px) {
+                            min-width: 170px;
+                            text-align: center;
+                        }
 
                         &:hover {
                             background-color: $orange;
@@ -90,9 +136,12 @@
 
     &-inline {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         gap: 1rem;
+
+        @media (max-width: 1365px) {
+            flex-direction: column;
+        }
 
         .support-content {
             padding: 2.45rem;
@@ -101,6 +150,11 @@
             justify-content: center;
             gap: 2.75rem;
             margin-bottom: 0;
+            margin-top: 0;
+
+            @media (max-width: 425px) {
+                flex-direction: column;
+            }
 
             &-img {
                 width: 96px;
@@ -138,6 +192,7 @@
             height: 100%;
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-direction: column;
             border: none;
             gap: 16px;
@@ -149,6 +204,10 @@
             color: $white;
             text-transform: uppercase;
             transition: .5s;
+
+            @media (max-width: 1365px) {
+                width: 100%;
+            }
 
             &:hover {
                 background-color: $blk;

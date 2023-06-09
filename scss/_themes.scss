@@ -89,6 +89,7 @@
     .support-content h3,
     .support-inline .support-content h4,
     .contact-header .heading h1,
+    .contact-header .heading .h1,
     .circle_sec svg textPath,
     .contact-form .form-group label,
     .contact-form .form-group .btn-submit,
@@ -100,11 +101,13 @@
     .filter-content-item .project-desc p,
     .banner-sec h3,
     .blog-insight h1,
+    .blog-insight .h1,
     .blog-insight h6,
     .blog-insight h5,
     .blog_content h3,
     .blog_content .user-info p,
     .contactPage-sec h1,
+    .contactPage-sec .h1,
     .contactPage-sec .box a,
     .contactPage-sec .box h4,
     .behind-scenes h4,
@@ -120,8 +123,11 @@
     .blogPage-sec h4,
     .share ul li a,
     .banner-agency h1,
+    .banner-agency .h1,
     .agency-slide ul li a,
-    .agc2-box h3 {
+    .agc2-box h3,
+    .banner-service h1,
+    .banner-service .h1 {
         color: $txt2;
     }
 
@@ -146,6 +152,7 @@
 
     .count-box .box:hover .bottom p,
     .unlock-skill.active h1,
+    .unlock-skill.active .h1,
     .unlock-skill.active h3 {
         color: $blk;
     }
@@ -178,7 +185,6 @@
     .support-content,
     .contact,
     .meta ul li a,
-    .contact-header .roket-sec,
     .service_page-box .ser-img,
     .banner-service,
     .filters ul li,
@@ -201,7 +207,8 @@
     .banner-blog .blog,
     .share,
     .blogPage-sec .hilight_txt,
-    .contactPage-sec .box-border {
+    .contactPage-sec .box-border,
+    .contact-header .roket-sec {
         border-color: #d8d8d8;
     }
 
@@ -304,5 +311,19 @@
                 display: flex;
             }
         }
+
+        &_page {
+            &-box {
+                .ser-img {
+                    display: none;
+
+                    &.blkImg {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
+
+
 }
