@@ -60,7 +60,7 @@
 
 .text-carousel {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     z-index: 9;
     left: 50%;
     transform: translateX(-50%);
