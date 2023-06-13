@@ -2863,6 +2863,11 @@ hr {
   bottom: 0;
   left: 0;
 }
+.contactPage-sec .box img:first-child {
+  height: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .contactPage-sec .box img.img-icon {
   top: 0;
   left: 50%;
